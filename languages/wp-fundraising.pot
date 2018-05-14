@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Wp Fundraising -  Donation and Crowdfunding Platform\n"
+"Project-Id-Version: WP Fundraising -  Donation and Crowdfunding Platform\n"
 "POT-Creation-Date: 2018-05-11 19:35+0600\n"
 "PO-Revision-Date: 2018-05-11 19:34+0600\n"
 "Last-Translator: \n"
@@ -1175,7 +1175,7 @@ msgid " to create a campaign"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Wp Fundraising -  Donation and Crowdfunding Platform"
+msgid "WP Fundraising -  Donation and Crowdfunding Platform"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

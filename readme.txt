@@ -8,11 +8,11 @@ Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Wp Fundraising - Donation and Crowdfunding Platform is a WooCommerce Powerd Donation and Crowdfunding plugin.
+WP Fundraising - Donation and Crowdfunding Platform is a WooCommerce Powerd Donation and Crowdfunding plugin.
 
 == Description ==
 
-Wp Fundraising - Donation and Crowdfunding Platform is a WooCommerce Powerd Donation and Crowdfunding plugin that empowers anyone to create a crowdfunding and donation site with WordPress. It’s very user-friendly and convenient to manage. Wp Fundraising built from the ground up for all your fundraising needs, Wp Fundraising provides you with a powerful donation Donation and Crowdfunding Platform optimized for online Fundraising.
+WP Fundraising - Donation and Crowdfunding Platform is a WooCommerce Powerd Donation and Crowdfunding plugin that empowers anyone to create a crowdfunding and donation site with WordPress. It’s very user-friendly and convenient to manage. WP Fundraising built from the ground up for all your fundraising needs, WP Fundraising provides you with a powerful donation Donation and Crowdfunding Platform optimized for online Fundraising.
 
 == Installation ==
 
