@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Wp Fundraising -  Donation and Crowdfunding Platform
+ * Plugin Name: WP Fundraising -  Donation and Crowdfunding Platform
  * Plugin URI:https://xpeedstudio.com
  * Description: The ultimate WooCommerce supported fundraising Donation and Crowdfunding toolkit
  * Author: XpeedStudio
@@ -17,12 +17,6 @@ define('WP_FUNDRAISING_VERSION', '1.0');
 
 require_once WP_FUNDRAISING_DIR_PATH.'inc/class.wp-fundraising-init.php';
 
-require_once(ABSPATH . "wp-admin" . '/includes/image.php');
-require_once(ABSPATH . "wp-admin" . '/includes/file.php');
-require_once(ABSPATH . "wp-admin" . '/includes/media.php');
-
-
-require_once( wp_normalize_path(ABSPATH).'wp-load.php');
 
 require_once WP_FUNDRAISING_DIR_PATH.'inc/hook/wp-fundraising-frontend-filters.php';
 
