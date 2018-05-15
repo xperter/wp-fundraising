@@ -7,7 +7,7 @@
 <form enctype="multipart/form-data" method="post" class="cart xs-donation-form" >
     <div class="xs-input-group">
         <label for="xs-donate-name"><?php esc_html_e('Donation Amount ','wp-fundraising');?><span class="color-light-red">**</span></label>
-        <input type="text" name="wp_donate_amount_field" id="xs-donate-name-form" class="form-control xs-donate-name-form" placeholder="<?php esc_html_e('Enter Amount','wp-fundraising');?>">
+        <input type="text" name="wp_donate_amount_field" id="xs-donate-name-form" class="form-control xs-donate-name-form" placeholder="<?php esc_attr_e('Enter Amount','wp-fundraising');?>">
     </div>
     <?php
 

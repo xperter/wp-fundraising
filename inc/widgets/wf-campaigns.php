@@ -83,7 +83,7 @@ class WF_Campaigns_Widget extends Widget_Base {
                 'label'			 =>esc_html__( 'Category', 'wp-fundraising' ),
                 'type'			 => Controls_Manager::TEXT,
                 'label_block'	 => true,
-                'placeholder'	 =>esc_html__('design,fashion', 'wp-fundraising' ),
+                'placeholder'	 =>esc_attr__('design,fashion', 'wp-fundraising' ),
                 'desc'          => esc_html__('add you multiple category use comma separator', 'wp-fundraising')
             ]
         );

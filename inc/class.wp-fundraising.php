@@ -730,7 +730,7 @@ if (!class_exists('WP_FundRaising')) {
                     </p>
                     <p class="form-field _wf_reward_ships_to_field ">
                         <label for="_wf_reward_ships_to"><?php esc_html_e('Ships To','wp-fundraising');?></label>
-                        <input type="text" placeholder="<?php echo esc_attr__('Anywhere in the world','wp-fundraising');?>" class="short" name="_wf_reward_ships_to[]" />
+                        <input type="text" placeholder="<?php esc_attr_e('Anywhere in the world','wp-fundraising');?>" class="short" name="_wf_reward_ships_to[]" />
                     </p>
                     <p class="form-field _wf_reward_bg_color_field ">
                         <label for="_wf_reward_bg_color"><?php esc_html_e('Reward Card BG Color','wp-fundraising');?></label>
@@ -769,7 +769,7 @@ if (!class_exists('WP_FundRaising')) {
                     </p>
                     <p class="form-field _wf_reward_ships_to_field ">
                         <label for="_wf_reward_ships_to"><?php esc_html_e('Ships To','wp-fundraising');?></label>
-                        <input type="text" placeholder="<?php echo esc_attr__('Anywhere in the world','wp-fundraising');?>" class="short" name="_wf_reward_ships_to[]" />
+                        <input type="text" placeholder="<?php esc_attr_e('Anywhere in the world','wp-fundraising');?>" class="short" name="_wf_reward_ships_to[]" />
                     </p>
                     <p class="form-field _wf_reward_bg_color_field ">
                         <label for="_wf_reward_bg_color"><?php esc_html_e('Reward Card BG Color','wp-fundraising');?></label>

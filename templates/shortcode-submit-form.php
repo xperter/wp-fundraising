@@ -137,7 +137,7 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
         $html .= '<div class="help-tip">';
         $html .= '<p>' . esc_html__("Separate tags with commas eg: tag1,tag2", "wp-fundraising") . '</p>';
         $html .= '</div>';
-        $html .= '<input type="text" class="form-control" name="wf_campaign_tags" id="campaign_tags" placeholder="' . esc_html__("Tag", "wp-fundraising") . '" value="'.$tag.'">';
+        $html .= '<input type="text" class="form-control" name="wf_campaign_tags" id="campaign_tags" placeholder="' . esc_attr__("Tag", "wp-fundraising") . '" value="'.$tag.'">';
         $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
