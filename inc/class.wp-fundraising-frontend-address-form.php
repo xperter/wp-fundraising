@@ -37,10 +37,10 @@ if (! class_exists('WP_Fundraising_Frontend_Address_Submit_Form')) {
                     $shipping_company = sanitize_text_field($_POST['shipping_company']);
                 }
                 if( isset($_POST['shipping_address_1']) ){
-                    $shipping_address_1 = esc_textarea($_POST['shipping_address_1']);
+                    $shipping_address_1 = sanitize_textarea_field($_POST['shipping_address_1']);
                 }
                 if( isset($_POST['shipping_address_2']) ){
-                    $shipping_address_2 = esc_textarea($_POST['shipping_address_2']);
+                    $shipping_address_2 = sanitize_textarea_field($_POST['shipping_address_2']);
                 }
                 if( isset($_POST['shipping_city']) ){
                     $shipping_city = sanitize_text_field($_POST['shipping_city']);
@@ -80,10 +80,10 @@ if (! class_exists('WP_Fundraising_Frontend_Address_Submit_Form')) {
                     $billing_company = sanitize_text_field($_POST['billing_company']);
                 }
                 if( isset($_POST['billing_address_1']) ){
-                    $billing_address_1 = esc_textarea($_POST['billing_address_1']);
+                    $billing_address_1 = sanitize_textarea_field($_POST['billing_address_1']);
                 }
                 if( isset($_POST['billing_address_2']) ){
-                    $billing_address_2 = esc_textarea($_POST['billing_address_2']);
+                    $billing_address_2 = sanitize_textarea_field($_POST['billing_address_2']);
                 }
                 if( isset($_POST['billing_city']) ){
                     $billing_city = sanitize_text_field($_POST['billing_city']);

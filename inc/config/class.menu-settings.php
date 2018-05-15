@@ -108,24 +108,14 @@ if ( !class_exists('WF_Menu_Settings' ) ):
                     ),
                 ),
                 'wf_social_share' => array(
-//                    array(
-//                        'name'  => '_wf_show_social_share',
-//                        'label' => esc_html__( 'Enable Social Share', 'wp-fundraising' ),
-//                        'desc'  => esc_html__( 'Enable Social Share in Single Campaign', 'wp-fundraising' ),
-//                        'type'  => 'checkbox'
-//                    ),
+
                     array(
                         'name'  => '_wf_enable_twitter',
                         'label' => esc_html__( 'Enable Twitter', 'wp-fundraising' ),
                         'desc'  => esc_html__( 'Enable Twitter in Single Campaign', 'wp-fundraising' ),
                         'type'  => 'checkbox'
                     ),
-//                    array(
-//                        'name'  => '_wf_twitter_key',
-//                        'label' => esc_html__( 'Twitter Key', 'wp-fundraising' ),
-//                        'desc'  => esc_html__( 'Enter Twitter Key', 'wp-fundraising' ),
-//                        'type'  => 'text'
-//                    ),
+
                     array(
                         'name'  => '_wf_enable_facebook',
                         'label' => esc_html__( 'Enable Facebook', 'wp-fundraising' ),
@@ -150,20 +140,10 @@ if ( !class_exists('WF_Menu_Settings' ) ):
                         'desc'  => esc_html__( 'Enable Linkedin in Single Campaign', 'wp-fundraising' ),
                         'type'  => 'checkbox'
                     ),
-//                    array(
-//                        'name'  => '_wf_linkedin_key',
-//                        'label' => esc_html__( 'Linkedin Key', 'wp-fundraising' ),
-//                        'desc'  => esc_html__( 'Enter Linkedin Key', 'wp-fundraising' ),
-//                        'type'  => 'text'
-//                    ),
+
                 ),
                 'wf_advanced' => array(
-//                    array(
-//                        'name'  => '_wf_hide_expired_campaign_from_archive',
-//                        'label' => esc_html__( 'Enable/Disable', 'wp-fundraising' ),
-//                        'desc'  => esc_html__( 'Hide Expired Campaign From Archive', 'wp-fundraising' ),
-//                        'type'  => 'checkbox'
-//                    ),
+
                     array(
                         'name'  => '_wf_hide_campaign_from_shop_page',
                         'label' => esc_html__( 'Enable/Disable', 'wp-fundraising' ),
@@ -209,55 +189,6 @@ if ( !class_exists('WF_Menu_Settings' ) ):
                     ),
                 ),
 
-                'wf_color' => array(
-                    array(
-                        'name'  => '_wf_enable_color_styling',
-                        'label' => esc_html__( 'Enable Display Settings', 'wp-fundraising' ),
-                        'desc'  => esc_html__( 'Enable display settings option for custom color layout.', 'wp-fundraising' ),
-                        'type'  => 'checkbox'
-                    ),
-                    array(
-                        'name'    => '_wf_color_scheme',
-                        'label'   => esc_html__( 'Color Scheme', 'wp-fundraising' ),
-                        'desc'    => esc_html__( 'Select color scheme of plugins.', 'wp-fundraising' ),
-                        'type'    => 'color',
-                        'default' => ''
-                    ),
-                    array(
-                        'name'    => '_wf_button_bg_color',
-                        'label'   => esc_html__( 'Button BG Color', 'wp-fundraising' ),
-                        'desc'    => esc_html__( 'Select button background color.', 'wp-fundraising' ),
-                        'type'    => 'color',
-                        'default' => ''
-                    ),
-                    array(
-                        'name'    => '_wf_button_bg_hover_color',
-                        'label'   => esc_html__( 'Button BG Hover Color', 'wp-fundraising' ),
-                        'desc'    => esc_html__( 'Select button background hover color.', 'wp-fundraising' ),
-                        'type'    => 'color',
-                        'default' => ''
-                    ),
-                    array(
-                        'name'    => '_wf_button_text_color',
-                        'label'   => esc_html__( 'Button Text Color', 'wp-fundraising' ),
-                        'desc'    => esc_html__( 'Select button text color.', 'wp-fundraising' ),
-                        'type'    => 'color',
-                        'default' => ''
-                    ),
-                    array(
-                        'name'    => '_wf_button_text_hover_color',
-                        'label'   => esc_html__( 'Button Text Hover Color', 'wp-fundraising' ),
-                        'desc'    => esc_html__( 'Select button text hover color.', 'wp-fundraising' ),
-                        'type'    => 'color',
-                        'default' => ''
-                    ),
-                    array(
-                        'name'        => '_wf_custom_css',
-                        'label'       => esc_html__( 'Custom CSS', 'wp-fundraising' ),
-                        'desc'        => esc_html__( 'Put here custom CSS.', 'wp-fundraising' ),
-                        'type'        => 'textarea'
-                    ),
-                )
             );
             return $settings_fields;
         }

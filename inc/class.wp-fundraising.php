@@ -80,7 +80,6 @@ if (!class_exists('WP_FundRaising')) {
             add_action( 'woocommerce_process_product_meta_wp_fundraising', array(&$this, 'wf_save_reward_option_field'  ));
             add_action( 'woocommerce_process_product_meta_wp_fundraising', array(&$this, 'wf_save_update_option_field'  ));
             add_filter( 'woocommerce_product_data_tabs', array(&$this, 'wf_hide_tab_panel' ));
-//            add_filter( 'woocommerce_checkout_fields' , array($this, 'wf_override_checkout_fields') ); // Remove billing address from the checkout page
             add_action( 'woocommerce_add_to_cart_validation', array($this, 'wf_remove_item_from_cart'), 10, 5); // Remove fundraising item from cart
             add_filter( 'woocommerce_add_cart_item', array($this, 'wf_save_user_funding_to_cookie'), 10, 3 ); //Filter cart item and save donation amount into cookir if product type fundraising
             add_action( 'woocommerce_before_calculate_totals', array($this, 'wf_add_user_funding')); //Save user input as there preferable amount with cart
