@@ -26,8 +26,8 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
             if ( ! in_array($post_id, $campaign_ids)){
 
                 $html.= '<div class="woocommerce mb-30">';
-                $html .= '<p class="woocommerce-info">'. __( 'You are not allowed to access this page.', 'wp-fundraising' ) .'</p>';
-                $html .= '<p>'. __( 'Want to create a brand new campaign?', 'wp-fundraising' ) .' <a href="'.home_url('/').'wf-campaign-form">'. __( 'Click Here', 'wp-fundraising' ) .'</p>';
+                $html .= '<p class="woocommerce-info">'. esc_html__( 'You are not allowed to access this page.', 'wp-fundraising' ) .'</p>';
+                $html .= '<p>'. esc_html__( 'Want to create a brand new campaign?', 'wp-fundraising' ) .' <a href="'.home_url('/').'wf-campaign-form">'. esc_html__( 'Click Here', 'wp-fundraising' ) .'</p>';
                 $html .= '</div>';
 
                 return $html;
@@ -86,10 +86,10 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         $html .= '<ul class="nav nav-tabs xs-nav-tabs" id="myTab" role="tablist">';
         $html .= ' <li class="nav-item">';
-        $html .= '<a class="nav-link active" id="generalOptions-tab" data-toggle="tab" href="#generalOptions" role="tab" aria-controls="generalOptions" aria-selected="true">' . __("General Options", "wp-fundraising") . '</a>';
+        $html .= '<a class="nav-link active" id="generalOptions-tab" data-toggle="tab" href="#generalOptions" role="tab" aria-controls="generalOptions" aria-selected="true">' . esc_html__("General Options", "wp-fundraising") . '</a>';
         $html .= '</li>';
         $html .= '<li class="nav-item">';
-        $html .= '<a class="nav-link" id="rewardOptions-tab" data-toggle="tab" href="#rewardOptions" role="tab" aria-controls="rewardOptions" aria-selected="false">' . __("Reward Options", "wp-fundraising") . '</a>';
+        $html .= '<a class="nav-link" id="rewardOptions-tab" data-toggle="tab" href="#rewardOptions" role="tab" aria-controls="rewardOptions" aria-selected="false">' . esc_html__("Reward Options", "wp-fundraising") . '</a>';
         $html .= '</li>';
         $html .= '</ul>';
         $html .= '<div class="tab-content" id="myTabContent">';
@@ -98,10 +98,10 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         //Title
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Title", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Title", "wp-fundraising") . '</span>';
 
         $html .= '<div class="help-tip">';
-		$html .= '<p>' . __("Put the campaign title here", "wp-fundraising") . '</p>';
+		$html .= '<p>' . esc_html__("Put the campaign title here", "wp-fundraising") . '</p>';
 		$html .= '</div>';
 
         $html .= '<input type="text" class="form-control" name="wf_campaign_title" id="campaign_title" value="'.$title.'">';
@@ -113,9 +113,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
         //Category
         $html .= '<div class="col-lg-6">';
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Category", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Category", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Select your campaign category", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Select your campaign category", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<div class="wf-fields">';
         $html .= '<select class="form-control" name="wf_campaign_category" id="campaign_category" value="'.$category.'">';
@@ -133,20 +133,20 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
         //Tag
         $html .= '<div class="col-lg-6">';
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Tag", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Tag", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Separate tags with commas eg: tag1,tag2", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Separate tags with commas eg: tag1,tag2", "wp-fundraising") . '</p>';
         $html .= '</div>';
-        $html .= '<input type="text" class="form-control" name="wf_campaign_tags" id="campaign_tags" placeholder="' . __("Tag", "wp-fundraising") . '" value="'.$tag.'">';
+        $html .= '<input type="text" class="form-control" name="wf_campaign_tags" id="campaign_tags" placeholder="' . esc_attr__("Tag", "wp-fundraising") . '" value="'.$tag.'">';
         $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
 
         //Image
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Image", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Image", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Upload a campaign feature image", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Upload a campaign feature image", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<div class="custom-file">';
         $html .= '<input type="file" class="custom-file-input" name="wf_campaign_image_id" id="customFile" value="'.$image_url.'">';
@@ -158,12 +158,12 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         //Video
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Video", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Video", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Put the campaign video URL here", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Put the campaign video URL here", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<div class="wf-fields">';
-        $html .= '<input type="url" name="wf_campaign_video" class="form-control" id="campaign_video" placeholder="' . __("https://", "wp-fundraising") . '" value="'.$video.'">';
+        $html .= '<input type="url" name="wf_campaign_video" class="form-control" id="campaign_video" placeholder="' . esc_html__("https://", "wp-fundraising") . '" value="'.$video.'">';
         $html .= '</div>';
         $html .= '</div>';
 
@@ -173,9 +173,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         //Start Date
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Start Date", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Start Date", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Campaign start date (dd-mm-yy)", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Campaign start date (dd-mm-yy)", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<input type="date" name="wf_campaign_start_date" class="form-control" id="campaign_start_date" value="'.$start_date.'">';
         $html .= '</div>';
@@ -183,9 +183,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         //Funding Goal
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Funding Goal ", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Funding Goal ", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Campaign funding goal", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Campaign funding goal", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<input type="text" class="form-control" name="wf_campaign_goal" id="campaign_goal" value="'.$campaign_goal.'">';
         $html .= '</div>';
@@ -193,9 +193,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         //Minimum Amount
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Minimum Amount", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Minimum Amount", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Minimum campaign funding amount", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Minimum campaign funding amount", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<input type="number" name="wf_campaign_min_amount" class="form-control" id="campaign_min_amount" value="'.$minimum_amount.'">';
         $html .= '</div>';
@@ -203,24 +203,24 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         //Recomended Amount
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Recomended Amount", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Recomended Amount", "wp-fundraising") . '</span>';
 
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Recommended campaign funding amount", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Recommended campaign funding amount", "wp-fundraising") . '</p>';
         $html .= '</div>';
 
         $html .= '<input type="number" name="_wf_funding_recommended_price" class="form-control" id="campaign_reco_amount" value="'.$recomended_amount.'">';
         $html .= '</div>';
 
         //Contributor Table
-        if( $campaign_contributor_table == '1' )
+        if( $campaign_contributor_table == 'yes' )
             $checked = 'checked="checked"';
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Contributor Table", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Contributor Table", "wp-fundraising") . '</span>';
 
         $html .= '<div class="custom-control">';
         $html .= '<input type="checkbox" class="custom-control-input"  '.$checked.' name="wf_show_contributor_table" id="customCheck1" value="yes">';
-        $html .= '<label class="custom-control-label" for="customCheck1">' . __("Show contributor table on campaign single page", "wp-fundraising") . '</label>';
+        $html .= '<label class="custom-control-label" for="customCheck1">' . esc_html__("Show contributor table on campaign single page", "wp-fundraising") . '</label>';
         $html .= '</div>';
         $html .= '</div>';
 
@@ -231,35 +231,38 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         //End Date
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("End Date", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("End Date", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Campaign end date (dd-mm-yy)", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Campaign end date (dd-mm-yy)", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<input type="date" class="form-control" name="wf_campaign_end_date" id="campaign_end_date" value="'.$end_date.'" >';
         $html .= '</div>';
 
         //End Method
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("End Method", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("End Method", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Choose the stage when campaign will end", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Choose the stage when campaign will end", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<select class="form-control" name="wf_campaign_end_method" id="campaign_end_method">';
-        if (wf_get_option('_wf_hide_target_goal', 'wf_basics') == 'off') {
+
+        if (wf_get_option('_wf_hide_target_goal', 'wf_basics') != "on") {
+
             $selected = $campaign_end_method == 'target_goal' ? 'selected="selected"' : '';
-            $html .= '<option value="target_goal" '.$selected.'>' . __("Target Goal", "wp-fundraising") . '</option>';
+            $html .= '<option value="target_goal" '.$selected.'>' . esc_html__("Target Goal", "wp-fundraising") . '</option>';
         }
-        if (wf_get_option('_wf_hide_target_date', 'wf_basics') == 'off') {
+        if (wf_get_option('_wf_hide_target_date', 'wf_basics') != "on") {
             $selected = $campaign_end_method == 'target_date' ? 'selected="selected"' : '';
-            $html .= '<option value="target_date" '.$selected.'>' . __("Target Date", "wp-fundraising") . '</option>';
+            $html .= '<option value="target_date" '.$selected.'>' . esc_html__("Target Date", "wp-fundraising") . '</option>';
         }
-        if (wf_get_option('_wf_hide_target_goal_and_date', 'wf_basics') == 'off') {
+        if (wf_get_option('_wf_hide_target_goal_and_date', 'wf_basics') != "on") {
             $selected = $campaign_end_method == 'target_goal_and_date' ? 'selected="selected"' : '';
-            $html .= '<option value="target_goal_and_date" '.$selected.'>' . __("Target Goal & Date", "wp-fundraising") . '</option>';
+            $html .= '<option value="target_goal_and_date" '.$selected.'>' . esc_html__("Target Goal & Date", "wp-fundraising") . '</option>';
         }
-        if (wf_get_option('_wf_hide_campaign_never_end', 'wf_basics') == 'off') {
+
+        if (wf_get_option('_wf_hide_campaign_never_end', 'wf_basics') != "on") {
             $selected = $campaign_end_method == 'never_end' ? 'selected="selected"' : '';
-            $html .= '<option value="never_end" '.$selected.'>' . __("Campaign Never Ends", "wp-fundraising") . '</option>';
+            $html .= '<option value="never_end" '.$selected.'>' . esc_html__("Campaign Never Ends", "wp-fundraising") . '</option>';
         }
 
         $html .= '</select>';
@@ -267,30 +270,30 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         //Maximum Amount
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Maximum Amount", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Maximum Amount", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Maximum campaign funding amount", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Maximum campaign funding amount", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<input type="number" name="wf_campaign_max_amount" class="form-control" id="campaign_max_amount" value="'.$maximum_amount.'">';
         $html .= '</div>';
 
         //Predefined Pledge Amount
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Predefined Pledge Amount", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Predefined Pledge Amount", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Predefined amount allow you to place the amount you donate box by click", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Predefined amount allow you to place the amount you donate box by click", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<input type="number" class="form-control" name="wf_campaign_predefined_amount" id="campaign_predefined_amount">';
         $html .= '</div>';
 
         //Contributor Anonymity
-        if( $contributor_show == '1' )
+        if( $contributor_show == 'yes' )
             $checked2 = 'checked="checked"';
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Contributor Anonymity", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Contributor Anonymity", "wp-fundraising") . '</span>';
         $html .= '<div class="custom-control">';
         $html .= '<input type="checkbox" class="custom-control-input" '.$checked2.' name="wf_mark_contributors_as_anonymous" id="customCheck2" value="yes">';
-        $html .= '<label class="custom-control-label" for="customCheck2">' . __("Make contributors anonymous on the contributor table", "wp-fundraising") . '</label>';
+        $html .= '<label class="custom-control-label" for="customCheck2">' . esc_html__("Make contributors anonymous on the contributor table", "wp-fundraising") . '</label>';
         $html .= '</div>';
         $html .= '</div>';
 
@@ -301,9 +304,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
         //Country
         $html .= '<div class="col-lg-6">';
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Country", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Country", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Select your country", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Select your country", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $countries_obj = new WC_Countries();
         $countries = $countries_obj->__get('countries');
@@ -324,9 +327,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
         //Location
         $html .= '<div class="col-lg-6">';
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Location", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Location", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Put the campaign location here", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Put the campaign location here", "wp-fundraising") . '</p>';
         $html .= '</div>';
         $html .= '<input type="text" class="form-control" value="'.$location.'" name="wf_campaign_location" id="campaign_location">';
         $html .= '</div>';
@@ -338,9 +341,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         //Short Description
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Short Description", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Short Description", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Put the campaign short description here", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Put the campaign short description here", "wp-fundraising") . '</p>';
         $html .= '</div>';
         ob_start();
         wp_editor($short_description, 'wf_campaign_short_description');
@@ -350,9 +353,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         //Description
         $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . __("Description", "wp-fundraising") . '</span>';
+        $html .= '<span class="h3">' . esc_html__("Description", "wp-fundraising") . '</span>';
         $html .= '<div class="help-tip">';
-        $html .= '<p>' . __("Put the campaign description here", "wp-fundraising") . '</p>';
+        $html .= '<p>' . esc_html__("Put the campaign description here", "wp-fundraising") . '</p>';
         $html .= '</div>';
         ob_start();
         wp_editor($description, 'wf_campaign_description');
@@ -398,18 +401,18 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
                 //Pledge Amount
                 $html .= '<div class="form-group">';
-                $html .= '<span class="h3">' . __("Pledge Amount", "wp-fundraising") . '</span>';
+                $html .= '<span class="h3">' . esc_html__("Pledge Amount", "wp-fundraising") . '</span>';
                 $html .= '<div class="help-tip">';
-                $html .= '<p>' . __("Enter Pledge amount", "wp-fundraising") . '</p>';
+                $html .= '<p>' . esc_html__("Enter Pledge amount", "wp-fundraising") . '</p>';
                 $html .= '</div>';
                 $html .= '<input type="number" class="form-control" name="_wf_pledge_amount[]" id="reward_pledge" value="'.$pledge_amount.'">';
                 $html .= '</div>';
 
                 //Reward Title
                 $html .= '<div class="form-group">';
-                $html .= '<span class="h3">' . __("Reward Title", "wp-fundraising") . '</span>';
+                $html .= '<span class="h3">' . esc_html__("Reward Title", "wp-fundraising") . '</span>';
                 $html .= '<div class="help-tip">';
-                $html .= '<p>' . __("Enter  Reward Title", "wp-fundraising") . '</p>';
+                $html .= '<p>' . esc_html__("Enter  Reward Title", "wp-fundraising") . '</p>';
                 $html .= '</div>';
                 $html .= '<input type="text" class="form-control" name="_wf_reward_title[]" id="reward_title" value="'.$reward_title.'">';
                 $html .= '</div>';
@@ -417,9 +420,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
                 //Reward
                 $html .= '<div class="form-group">';
-                $html .= '<span class="h3">' . __("Reward Description", "wp-fundraising") . '</span>';
+                $html .= '<span class="h3">' . esc_html__("Reward Description", "wp-fundraising") . '</span>';
                 $html .= '<div class="help-tip">';
-                $html .= '<p>' . __("Enter Reward description", "wp-fundraising") . '</p>';
+                $html .= '<p>' . esc_html__("Enter Reward description", "wp-fundraising") . '</p>';
                 $html .= '</div>';
                 $html .= '<textarea class="form-control form-control-sm" name="_wf_reward_description[]" id="campaign_reward_description" rows="3">'.$reward_description.'</textarea>';
                 $html .= '</div>';
@@ -427,9 +430,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
                 //Additional Reward Offer
                 $html .= '<div class="form-group">';
-                $html .= '<span class="h3">' . __("Additional Reward Offer", "wp-fundraising") . '</span>';
+                $html .= '<span class="h3">' . esc_html__("Additional Reward Offer", "wp-fundraising") . '</span>';
                 $html .= '<div class="help-tip">';
-                $html .= '<p>' . __("Additional Reward Offer", "wp-fundraising") . '</p>';
+                $html .= '<p>' . esc_html__("Additional Reward Offer", "wp-fundraising") . '</p>';
                 $html .= '</div>';
                 $html .= '<input type="text" class="form-control" name="_wf_reward_offer[]" id="campaign_reward_offer" value="'.$reward_offer.'">';
                 $html .= '</div>';
@@ -440,9 +443,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
                 //Estimated Delivery Date
                 $html .= '<div class="col-lg-6">';
                 $html .= '<div class="form-group">';
-                $html .= '<span class="h3">' . __("Estimated Delivery Date", "wp-fundraising") . '</span>';
+                $html .= '<span class="h3">' . esc_html__("Estimated Delivery Date", "wp-fundraising") . '</span>';
                 $html .= '<div class="help-tip">';
-                $html .= '<p>' . __("Estimated delivery Date of the Reward (dd-mm-yy)", "wp-fundraising") . '</p>';
+                $html .= '<p>' . esc_html__("Estimated delivery Date of the Reward (dd-mm-yy)", "wp-fundraising") . '</p>';
                 $html .= '</div>';
                 $html .= '<input type="date" class="form-control" name="_wf_reward_estimated_delivery_date[]" id="campaign_estimated_date" value="'.$reward_estimated_delivery_date.'" >';
                 $html .= '</div>';
@@ -452,9 +455,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
                 //Quantity
                 $html .= '<div class="col-lg-6">';
                 $html .= '<div class="form-group">';
-                $html .= '<span class="h3">' . __("Quantity", "wp-fundraising") . '</span>';
+                $html .= '<span class="h3">' . esc_html__("Quantity", "wp-fundraising") . '</span>';
                 $html .= '<div class="help-tip">';
-                $html .= '<p>' . __("Enter Quantity of physical products", "wp-fundraising") . '</p>';
+                $html .= '<p>' . esc_html__("Enter Quantity of physical products", "wp-fundraising") . '</p>';
                 $html .= '</div>';
                 $html .= '<input type="number" class="form-control" step="1" min="1" name="_wf_reward_quantity[]"  value="'.$reward_quantity.'"/>';
                 $html .= '</div>';
@@ -465,18 +468,18 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
                 //Ships To
                 $html .= '<div class="form-group">';
-                $html .= '<span class="h3">' . __("Ships To", "wp-fundraising") . '</span>';
+                $html .= '<span class="h3">' . esc_html__("Ships To", "wp-fundraising") . '</span>';
                 $html .= '<div class="help-tip">';
-                $html .= '<p>' . __("Enter Ships To", "wp-fundraising") . '</p>';
+                $html .= '<p>' . esc_html__("Enter Ships To", "wp-fundraising") . '</p>';
                 $html .= '</div>';
                 $html .= '<input type="text" class="form-control" placeholder="Anywhere in the world" name="_wf_reward_ships_to[]" value="'.$reward_ships_to.'"/>';
                 $html .= '</div>';
 
 
-                $html .= '<button type="reset" id="remove-btn" class="btn btn-danger float-right rounded">' . __("Remove", "wp-fundraising") . '</button>';
+                $html .= '<button type="reset" id="remove-btn" class="btn btn-danger float-right rounded">' . esc_html__("Remove", "wp-fundraising") . '</button>';
                 $html .= '<div class="clearfix"></div>';
                 $html .= '</div>';
-                $html .= '<button type="submit" id="addMore-btn" class="btn btn-primary float-right rounded">' . __("Add more", "wp-fundraising") . '</button>';
+                $html .= '<button type="submit" id="addMore-btn" class="btn btn-primary float-right rounded">' . esc_html__("Add more", "wp-fundraising") . '</button>';
                 $html .= '<div class="clearfix"></div>';
 
 
@@ -488,18 +491,18 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
             //Pledge Amount
             $html .= '<div class="form-group">';
-            $html .= '<span class="h3">' . __("Pledge Amount", "wp-fundraising") . '</span>';
+            $html .= '<span class="h3">' . esc_html__("Pledge Amount", "wp-fundraising") . '</span>';
             $html .= '<div class="help-tip">';
-            $html .= '<p>' . __("Enter Pledge amount", "wp-fundraising") . '</p>';
+            $html .= '<p>' . esc_html__("Enter Pledge amount", "wp-fundraising") . '</p>';
             $html .= '</div>';
             $html .= '<input type="number" class="form-control" name="_wf_pledge_amount[]" id="reward_pledge">';
             $html .= '</div>';
 
             //Reward Title
             $html .= '<div class="form-group">';
-            $html .= '<span class="h3">' . __("Reward Title", "wp-fundraising") . '</span>';
+            $html .= '<span class="h3">' . esc_html__("Reward Title", "wp-fundraising") . '</span>';
             $html .= '<div class="help-tip">';
-            $html .= '<p>' . __("Enter  Reward Title", "wp-fundraising") . '</p>';
+            $html .= '<p>' . esc_html__("Enter  Reward Title", "wp-fundraising") . '</p>';
             $html .= '</div>';
             $html .= '<input type="number" class="form-control" name="_wf_reward_title[]" id="reward_title">';
             $html .= '</div>';
@@ -507,9 +510,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
             //Reward
             $html .= '<div class="form-group">';
-            $html .= '<span class="h3">' . __("Reward Description", "wp-fundraising") . '</span>';
+            $html .= '<span class="h3">' . esc_html__("Reward Description", "wp-fundraising") . '</span>';
             $html .= '<div class="help-tip">';
-            $html .= '<p>' . __("Enter Reward description", "wp-fundraising") . '</p>';
+            $html .= '<p>' . esc_html__("Enter Reward description", "wp-fundraising") . '</p>';
             $html .= '</div>';
             $html .= '<textarea class="form-control form-control-sm" name="_wf_reward_description[]" id="campaign_reward_description" rows="3"></textarea>';
             $html .= '</div>';
@@ -517,9 +520,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
             //Additional Reward Offer
             $html .= '<div class="form-group">';
-            $html .= '<span class="h3">' . __("Additional Reward Offer", "wp-fundraising") . '</span>';
+            $html .= '<span class="h3">' . esc_html__("Additional Reward Offer", "wp-fundraising") . '</span>';
             $html .= '<div class="help-tip">';
-            $html .= '<p>' . __("Additional Reward Offer", "wp-fundraising") . '</p>';
+            $html .= '<p>' . esc_html__("Additional Reward Offer", "wp-fundraising") . '</p>';
             $html .= '</div>';
             $html .= '<input type="text" class="form-control" name="_wf_reward_offer[]" id="campaign_reward_offer" value="'.$campaign_reward_offer.'" >';
             $html .= '</div>';
@@ -530,9 +533,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
             //Estimated Delivery Date
             $html .= '<div class="col-lg-6">';
             $html .= '<div class="form-group">';
-            $html .= '<span class="h3">' . __("Estimated Delivery Date", "wp-fundraising") . '</span>';
+            $html .= '<span class="h3">' . esc_html__("Estimated Delivery Date", "wp-fundraising") . '</span>';
             $html .= '<div class="help-tip">';
-            $html .= '<p>' . __("Estimated delivery Date of the Reward (dd-mm-yy)", "wp-fundraising") . '</p>';
+            $html .= '<p>' . esc_html__("Estimated delivery Date of the Reward (dd-mm-yy)", "wp-fundraising") . '</p>';
             $html .= '</div>';
             $html .= '<input type="date" class="form-control" name="_wf_reward_estimated_delivery_date[]" id="campaign_estimated_date" value="'.$estimated_date.'" >';
             $html .= '</div>';
@@ -542,9 +545,9 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
             //Quantity
             $html .= '<div class="col-lg-6">';
             $html .= '<div class="form-group">';
-            $html .= '<span class="h3">' . __("Quantity", "wp-fundraising") . '</span>';
+            $html .= '<span class="h3">' . esc_html__("Quantity", "wp-fundraising") . '</span>';
             $html .= '<div class="help-tip">';
-            $html .= '<p>' . __("Enter Quantity of physical products", "wp-fundraising") . '</p>';
+            $html .= '<p>' . esc_html__("Enter Quantity of physical products", "wp-fundraising") . '</p>';
             $html .= '</div>';
             $html .= '<input type="number" class="form-control" step="1" min="1" name="_wf_reward_quantity[]" />';
             $html .= '</div>';
@@ -554,18 +557,18 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
             //Ships To
             $html .= '<div class="form-group">';
-            $html .= '<span class="h3" >' . __("Ships To", "wp-fundraising") . '</span>';
+            $html .= '<span class="h3" >' . esc_html__("Ships To", "wp-fundraising") . '</span>';
             $html .= '<div class="help-tip">';
-            $html .= '<p>' . __("Enter Ships To", "wp-fundraising") . '</p>';
+            $html .= '<p>' . esc_html__("Enter Ships To", "wp-fundraising") . '</p>';
             $html .= '</div>';
             $html .= '<input type="text" class="form-control"  placeholder="Anywhere in the world" name="_wf_reward_ships_to[]" />';
             $html .= '</div>';
 
 
-            $html .= '<button type="reset" id="remove-btn" class="btn btn-danger float-right rounded">' . __("Remove", "wp-fundraising") . '</button>';
+            $html .= '<button type="reset" id="remove-btn" class="btn btn-danger float-right rounded">' . esc_html__("Remove", "wp-fundraising") . '</button>';
             $html .= '<div class="clearfix"></div>';
             $html .= '</div>';
-            $html .= '<button type="submit" id="addMore-btn" class="btn btn-primary float-right rounded">' . __("Add more", "wp-fundraising") . '</button>';
+            $html .= '<button type="submit" id="addMore-btn" class="btn btn-primary float-right rounded">' . esc_html__("Add more", "wp-fundraising") . '</button>';
             $html .= '<div class="clearfix"></div>';
 
 
@@ -582,13 +585,13 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
         $html .= '<div class="form-group">';
         $html .= '<div class="custom-control">';
         $html .= '<input type="checkbox" class="custom-control-input" name="wp_fundraising_terms_agree" id="customCheck3">';
-        $html .= '<label class="custom-control-label" for="customCheck3">' . __("I agree with terms and conditions.", "wp-fundraising") . '</label>';
+        $html .= '<label class="custom-control-label" for="customCheck3">' . esc_html__("I agree with terms and conditions.", "wp-fundraising") . '</label>';
         $html .= '</div>';
         $html .= '</div>';
 
 
         $html .= '<div class="clearfix">';
-        $html .= '<button type="submit" name="campaign_submit" class="btn btn-primary float-right rounded">' . __("Submit", "wp-fundraising") . '</button>';
+        $html .= '<button type="submit" name="campaign_submit" class="btn btn-primary float-right rounded">' . esc_html__("Submit", "wp-fundraising") . '</button>';
         $html .= '</div>';
 
 

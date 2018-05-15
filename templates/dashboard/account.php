@@ -28,7 +28,7 @@ if(isset($data['last_name'][0])){
     $last_name = $data['last_name'][0];
 }
 if(isset($data['description'][0])){
-    $description = esc_textarea($data['description'][0]);
+    $description = sanitize_textarea_field($data['description'][0]);
 }
 ?>
 <div class="tab-pane slideUp xs-dashboard" id="myAccount" role="tabpanel">

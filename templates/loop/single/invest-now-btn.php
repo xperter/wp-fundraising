@@ -21,7 +21,7 @@ if ($product->get_type() == 'wp_fundraising') { ?>
     <form enctype="multipart/form-data" method="post" class="cart xs-donation-form" >
         <div class="xs-input-group">
             <label for="xs-donate-name"><?php esc_html_e('Donation Amount ','wp-fundraising');?><span class="color-light-red">**</span></label>
-            <input type="text" name="wp_donate_amount_field" id="xs-donate-name" class="form-control" placeholder="10">
+            <input type="text" name="wp_donate_amount_field" id="xs-donate-name" class="form-control" placeholder="<?php esc_attr_e('Custom Amount','wp-fundraising');?>">
         </div>
         <?php
         $donation_level_fields = get_post_meta($post->ID, 'repeatable_donation_level_fields', true);

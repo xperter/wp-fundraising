@@ -56,8 +56,6 @@ class WP_Fundraising_Actions{
                 'WP_Fundraising_Actions::wf_campaign_single_fund_this_campaign_btn' => array(20),
                 'WP_Fundraising_Actions::wf_campaign_single_reward_info' => array(30),
                 'WP_Fundraising_Actions::wf_campaign_single_social_share' => array(25),
-//                'WP_Fundraising_Actions::_wf_total_fund_raised_by_campaign' => array(30),
-//                'WP_Fundraising_Actions::_wf_total_goal_by_campaign' => array(35),
             ),
             'woocommerce_after_shop_loop_item' => array(
                 'WP_Fundraising_Actions::wf_after_item_title_data',
@@ -222,7 +220,7 @@ class WP_Fundraising_Actions{
         global $post;
         $product = wc_get_product($post->ID);
         $show_contributor_table   = get_post_meta( $post->ID, '_wf_show_contributor_table', true );
-//        if($show_contributor_table == 'yes'):
+        if($show_contributor_table == 'yes'):
             if(($product->get_type() =='wp_fundraising') || ($product->get_type() =='wf_donation')){
                 // Adds the new tab
                 $tabs['backers'] = array(
@@ -231,7 +229,7 @@ class WP_Fundraising_Actions{
                     'callback'  => 'WP_Fundraising_Actions::wf_product_backers_tab_content'
                 );
             }
-//        endif;
+        endif;
 
         return $tabs;
     }

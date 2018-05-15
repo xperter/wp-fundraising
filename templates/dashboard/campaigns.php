@@ -39,9 +39,9 @@ if ( $the_query->have_posts() ) :
         if($total_raised == null){
             $total_raised = 0;
         }
-        $days_remaining = apply_filters('date_expired_msg', __('Date expired', 'wp-fundraising'));
+        $days_remaining = apply_filters('date_expired_msg', esc_html__('Date expired', 'wp-fundraising'));
         if (wf_date_remaining(get_the_ID())){
-            $days_remaining = apply_filters('date_remaining_msg', __(wf_date_remaining(get_the_ID()), 'wp-fundraising'));
+            $days_remaining = apply_filters('date_remaining_msg', esc_html__(wf_date_remaining(get_the_ID()), 'wp-fundraising'));
         }
         ?>
         <div class="xs-campaign-info-card">
@@ -85,7 +85,7 @@ if ( $the_query->have_posts() ) :
     <?php endwhile;
     wp_reset_postdata();
 else :
-    ?><p> <?php _e( 'Sorry, no Campaign Found.','wp-fundraising' ); ?></p>
+    ?><p> <?php esc_html_e( 'Sorry, no Campaign Found.','wp-fundraising' ); ?></p>
 <?php endif; ?>
 
 </div>

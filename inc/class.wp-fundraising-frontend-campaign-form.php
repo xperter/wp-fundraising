@@ -28,7 +28,7 @@ if (! class_exists('WP_Fundraising_Frontend_Campaign_Submit_Form')) {
                 $campaign_end_method = $campaign_contributor_table = $campaign_contributor_show = $campaign_country = $campaign_location = '';
 
                 if ( empty($_POST['wp_fundraising_terms_agree'])){
-                    die(json_encode(array('success'=> 0, 'message' => __('Please check terms condition', 'wp-fundraising'))));
+                    die(json_encode(array('success'=> 0, 'message' => esc_html__('Please check terms condition', 'wp-fundraising'))));
                 }
 
                 if ($_POST['wf_campaign_title']) {
@@ -71,13 +71,13 @@ if (! class_exists('WP_Fundraising_Frontend_Campaign_Submit_Form')) {
                     $recommended_price = sanitize_text_field($_POST['_wf_funding_recommended_price']);
                 }
                 if (isset($_POST['wf_show_contributor_table'])) {
-                    $campaign_contributor_table = $_POST['wf_show_contributor_table'];
+                    $campaign_contributor_table = sanitize_text_field($_POST['wf_show_contributor_table']);
                 }
                 if ($_POST['wf_campaign_end_method']) {
                     $campaign_end_method = sanitize_text_field($_POST['wf_campaign_end_method']);
                 }
                 if (isset($_POST['wf_mark_contributors_as_anonymous'])) {
-                    $campaign_contributor_show = $_POST['wf_mark_contributors_as_anonymous'];
+                    $campaign_contributor_show = sanitize_text_field($_POST['wf_mark_contributors_as_anonymous']);
                 }
                 if ($_POST['wf_campaign_country']) {
                     $campaign_country = sanitize_text_field($_POST['wf_campaign_country']);
@@ -178,21 +178,21 @@ if (! class_exists('WP_Fundraising_Frontend_Campaign_Submit_Form')) {
                     update_post_meta($campaign_id,'_thumbnail_id',$attach_id);
                     set_post_thumbnail( $campaign_id, $attach_id );
 
-                    update_post_meta($campaign_id, '_wf_funding_video', esc_url($video));
-                    update_post_meta($campaign_id, '_wf_funding_goal', esc_attr($campaign_goal));
-                    update_post_meta($campaign_id, '_wf_duration_start', esc_attr($start_date));
-                    update_post_meta($campaign_id, '_wf_duration_end', esc_attr($end_date));
-                    update_post_meta($campaign_id, '_wf_funding_minimum_price', esc_attr($min_price));
-                    update_post_meta($campaign_id, '_wf_funding_maximum_price', esc_attr($max_price));
-                    update_post_meta($campaign_id, '_wf_funding_recommended_price', esc_attr($recommended_price));
-                    update_post_meta($campaign_id, '_wf_campaign_predefined_amount', esc_attr($campaign_predefined_amount));
+                    update_post_meta($campaign_id, '_wf_funding_video', $video);
+                    update_post_meta($campaign_id, '_wf_funding_goal', $campaign_goal);
+                    update_post_meta($campaign_id, '_wf_duration_start', $start_date);
+                    update_post_meta($campaign_id, '_wf_duration_end', $end_date);
+                    update_post_meta($campaign_id, '_wf_funding_minimum_price', $min_price);
+                    update_post_meta($campaign_id, '_wf_funding_maximum_price', $max_price);
+                    update_post_meta($campaign_id, '_wf_funding_recommended_price', $recommended_price);
+                    update_post_meta($campaign_id, '_wf_campaign_predefined_amount', $campaign_predefined_amount);
 
 
-                    update_post_meta($campaign_id, '_wf_campaign_end_method', esc_attr($campaign_end_method));
-                    update_post_meta($campaign_id, '_wf_show_contributor_table', esc_attr($campaign_contributor_table));
-                    update_post_meta($campaign_id, '_wf_mark_contributors_as_anonymous', esc_attr($campaign_contributor_show));
-                    update_post_meta($campaign_id, '_wf_country', esc_attr($campaign_country));
-                    update_post_meta($campaign_id, '_wf_location', esc_html($campaign_location));
+                    update_post_meta($campaign_id, '_wf_campaign_end_method', $campaign_end_method);
+                    update_post_meta($campaign_id, '_wf_show_contributor_table', $campaign_contributor_table);
+                    update_post_meta($campaign_id, '_wf_mark_contributors_as_anonymous', $campaign_contributor_show);
+                    update_post_meta($campaign_id, '_wf_country', $campaign_country);
+                    update_post_meta($campaign_id, '_wf_location', $campaign_location);
 
                     update_post_meta( $campaign_id, 'repeatable_reward_fields', $new_reward );
 

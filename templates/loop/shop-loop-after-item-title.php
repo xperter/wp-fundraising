@@ -32,9 +32,9 @@
     //Get order sales value by product
     $sales_value_by_product = 0;
 
-    $days_remaining = apply_filters('date_expired_msg', __('Date expired', 'wp-fundraising'));
+    $days_remaining = apply_filters('date_expired_msg', esc_html__('Date expired', 'wp-fundraising'));
     if (wf_date_remaining()){
-        $days_remaining = apply_filters('date_remaining_msg', __(wf_date_remaining().' days remaining', 'wp-fundraising'));
+        $days_remaining = apply_filters('date_remaining_msg', esc_html__(wf_date_remaining().' days remaining', 'wp-fundraising'));
     }
 
     $html = '';
@@ -45,19 +45,19 @@
     }
 
     if ($funding_goal) {
-        $html .= '<li>'.wc_price($funding_goal).'<span>'.__('Funding Goal', 'wp-fundraising') . '</span></li>';
+        $html .= '<li>'.wc_price($funding_goal).'<span>'.esc_html__('Funding Goal', 'wp-fundraising') . '</span></li>';
     }
 
     if ($total_sales) {
-        $html .=  '<li>'.wc_price( $raised).'<span>'.__('Raised', 'wp-fundraising') . '</span></li>';
+        $html .=  '<li>'.wc_price( $raised).'<span>'.esc_html__('Raised', 'wp-fundraising') . '</span></li>';
     }
     if ($total_sales && $funding_goal) {
         $percent = wf_get_fund_raised_percent();
-        $html .= '<li><span class="number-percentage-count">' . $percent.' %</span><span>'.__('Funded: ', 'wp-fundraising') . '</span></li>';
+        $html .= '<li><span class="number-percentage-count">' . $percent.' %</span><span>'.esc_html__('Funded: ', 'wp-fundraising') . '</span></li>';
     }
 
     if ($total_sales) {
-        $html .= '<li>'.$days_remaining. '<span>'.__('Days to go', 'wp-fundraising') . '</span></li>';
+        $html .= '<li>'.$days_remaining. '<span>'.esc_html__('Days to go', 'wp-fundraising') . '</span></li>';
     }
 
     $html .= '</ul>';

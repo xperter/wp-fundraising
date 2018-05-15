@@ -41,7 +41,7 @@ if (! class_exists('WP_Fundraising_Frontend_Account_Submit_Form')) {
                     $userWebSite = sanitize_text_field($_POST['userWebSite']);
                 }
                 if( isset($_POST['userBio']) ){
-                    $userBio = esc_textarea($_POST['userBio']);
+                    $userBio = sanitize_textarea_field($_POST['userBio']);
                 }
 
                 $user_data = array(

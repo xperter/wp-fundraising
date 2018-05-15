@@ -14,49 +14,49 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 if (!function_exists('wf_single_backers_count_text')) {
     function wf_single_backers_count_text()
     {
-        return apply_filters('wf_single_backers_count_text', __('Backers', 'wp-fundraising'));
+        return apply_filters('wf_single_backers_count_text', esc_html__('Backers', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_single_backers_tab_text')) {
     function wf_single_backers_tab_text()
     {
-        return apply_filters('wf_single_backers_tab_text', __('Backers', 'wp-fundraising'));
+        return apply_filters('wf_single_backers_tab_text', esc_html__('Backers', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_single_update_tab_text')) {
     function wf_single_update_tab_text()
     {
-        return apply_filters('wf_single_update_tab_text', __('Update', 'wp-fundraising'));
+        return apply_filters('wf_single_update_tab_text', esc_html__('Update', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_single_invest_now_button_text')) {
     function wf_single_invest_now_button_text()
     {
-        return apply_filters('wf_single_invest_now_button_text', __('Invest Now', 'wp-fundraising'));
+        return apply_filters('wf_single_invest_now_button_text', esc_html__('Invest Now', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_single_fund_goal_text')) {
     function wf_single_fund_goal_text()
     {
-        return apply_filters('wf_single_fund_goal_text', __('Goal', 'wp-fundraising'));
+        return apply_filters('wf_single_fund_goal_text', esc_html__('Goal', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_single_fund_raised_percent_text')) {
     function wf_single_fund_raised_percent_text()
     {
-        return apply_filters('wf_single_fund_raised_percent_text', __('Fund Raised', 'wp-fundraising'));
+        return apply_filters('wf_single_fund_raised_percent_text', esc_html__('Fund Raised', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_single_fund_raised_text')) {
     function wf_single_fund_raised_text()
     {
-        return apply_filters('wf_single_fund_raised_text', __('Pledged', 'wp-fundraising'));
+        return apply_filters('wf_single_fund_raised_text', esc_html__('Pledged', 'wp-fundraising'));
     }
 }
 
@@ -67,7 +67,7 @@ if (!function_exists('wf_single_related_campaign_title')) {
             'wf_single_related_campaign_title',
             sprintf(
                 '<h2 class="color-navy-blue">%s</h2><span class="xs-separetor dashed-separetor fundpress-separetor"></span>' ,
-                __('Other Project', 'wp-fundraising')
+                esc_html__('Other Project', 'wp-fundraising')
             )
         );
     }
@@ -80,7 +80,7 @@ if (!function_exists('wf_single_related_campaign_description')) {
             'wf_single_related_campaign_description',
             sprintf(
                 '<p>%s</p>' ,
-                __('FundPress has built a platform focused on aiding entrepreneurs, startups, and companies raise capital from anyone.', 'wp-fundraising')
+                esc_html__('FundPress has built a platform focused on aiding entrepreneurs, startups, and companies raise capital from anyone.', 'wp-fundraising')
             )
         );
     }
@@ -93,7 +93,7 @@ if (!function_exists('wf_single_reward_estimated_delivery_text')) {
             'wf_single_reward_estimated_delivery_text',
             sprintf(
                 '<h5>%s</h5>' ,
-                __('Estimated Delivery', 'wp-fundraising')
+                esc_html__('Estimated Delivery', 'wp-fundraising')
             )
         );
     }
@@ -106,7 +106,7 @@ if (!function_exists('wf_single_reward_ship_to_text')) {
             'wf_single_reward_ship_to_text',
             sprintf(
                 '<h5>%s</h5>' ,
-                __('Ship To', 'wp-fundraising')
+                esc_html__('Ship To', 'wp-fundraising')
             )
         );
     }
@@ -120,28 +120,28 @@ if (!function_exists('wf_single_reward_ship_to_text')) {
 if (!function_exists('wf_archive_backers_count_text')) {
     function wf_archive_backers_count_text()
     {
-        return apply_filters('wf_archive_backers_count_text', __('Backers', 'wp-fundraising'));
+        return apply_filters('wf_archive_backers_count_text', esc_html__('Backers', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_archive_fund_goal_text')) {
     function wf_archive_fund_goal_text()
     {
-        return apply_filters('wf_archive_fund_goal_text', __('Goal', 'wp-fundraising'));
+        return apply_filters('wf_archive_fund_goal_text', esc_html__('Goal', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_archive_fund_raised_percent_text')) {
     function wf_archive_fund_raised_percent_text()
     {
-        return apply_filters('wf_archive_fund_raised_percent_text', __('Fund Raised', 'wp-fundraising'));
+        return apply_filters('wf_archive_fund_raised_percent_text', esc_html__('Fund Raised', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_archive_fund_raised_text')) {
     function wf_archive_fund_raised_text()
     {
-        return apply_filters('wf_archive_fund_raised_text', __('Pledged', 'wp-fundraising'));
+        return apply_filters('wf_archive_fund_raised_text', esc_html__('Pledged', 'wp-fundraising'));
     }
 }
 
@@ -149,9 +149,9 @@ if (!function_exists('wf_archive_days_remaining_text')) {
     function wf_archive_days_remaining_text()
     {
         if (wf_date_remaining()) {
-            return apply_filters('wf_archive_days_remaining_text', __('Days to go', 'wp-fundraising'));
+            return apply_filters('wf_archive_days_remaining_text', esc_html__('Days to go', 'wp-fundraising'));
         }else{
-            return apply_filters('wf_archive_days_remaining_text', __('', 'wp-fundraising'));
+            return apply_filters('wf_archive_days_remaining_text', esc_html__('', 'wp-fundraising'));
         }
     }
 }
@@ -170,28 +170,28 @@ if (!function_exists('wf_login_signup_modal_class')) {
 if (!function_exists('wf_login_label')) {
     function wf_login_label()
     {
-        return apply_filters('wf_login_label', __('Login', 'wp-fundraising'));
+        return apply_filters('wf_login_label', esc_html__('Login', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_login_button_text')) {
     function wf_login_button_text()
     {
-        return apply_filters('wf_login_button_text', __('login now', 'wp-fundraising'));
+        return apply_filters('wf_login_button_text', esc_html__('login now', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_signup_label')) {
     function wf_signup_label()
     {
-        return apply_filters('wf_signup_label', __('SignUp', 'wp-fundraising'));
+        return apply_filters('wf_signup_label', esc_html__('SignUp', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_signup_button_text')) {
     function wf_signup_button_text()
     {
-        return apply_filters('wf_signup_button_text', __('Signup', 'wp-fundraising'));
+        return apply_filters('wf_signup_button_text', esc_html__('Signup', 'wp-fundraising'));
     }
 }
 
@@ -200,7 +200,7 @@ if (!function_exists('wf_signup_button_text')) {
 if (!function_exists('wf_add_new_campaign_text')) {
     function wf_add_new_campaign_text()
     {
-        return apply_filters('wf_add_new_campaign_text', __('Add New Campaign', 'wp-fundraising'));
+        return apply_filters('wf_add_new_campaign_text', esc_html__('Add New Campaign', 'wp-fundraising'));
     }
 }
 
@@ -208,21 +208,21 @@ if (!function_exists('wf_add_new_campaign_text')) {
 if (!function_exists('wf_dashboard_fund_goal_text')) {
     function wf_dashboard_fund_goal_text()
     {
-        return apply_filters('wf_dashboard_fund_goal_text', __('Goal', 'wp-fundraising'));
+        return apply_filters('wf_dashboard_fund_goal_text', esc_html__('Goal', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_dashboard_fund_raised_percent_text')) {
     function wf_dashboard_fund_raised_percent_text()
     {
-        return apply_filters('wf_dashboard_fund_raised_percent_text', __('Fund Raised', 'wp-fundraising'));
+        return apply_filters('wf_dashboard_fund_raised_percent_text', esc_html__('Fund Raised', 'wp-fundraising'));
     }
 }
 
 if (!function_exists('wf_dashboard_fund_raised_text')) {
     function wf_dashboard_fund_raised_text()
     {
-        return apply_filters('wf_dashboard_fund_raised_text', __('Pledged', 'wp-fundraising'));
+        return apply_filters('wf_dashboard_fund_raised_text', esc_html__('Pledged', 'wp-fundraising'));
     }
 }
 
@@ -230,9 +230,9 @@ if (!function_exists('wf_dashboard_days_remaining_text')) {
     function wf_dashboard_days_remaining_text()
     {
         if (wf_date_remaining()) {
-            return apply_filters('wf_dashboard_days_remaining_text', __('Days to go', 'wp-fundraising'));
+            return apply_filters('wf_dashboard_days_remaining_text', esc_html__('Days to go', 'wp-fundraising'));
         }else{
-            return apply_filters('wf_dashboard_days_remaining_text', __('', 'wp-fundraising'));
+            return apply_filters('wf_dashboard_days_remaining_text', esc_html__('', 'wp-fundraising'));
         }
     }
 }
@@ -258,11 +258,11 @@ if (!function_exists('wf_donate_modal_heading')) {
                     <p class="small">%2s "<span class="color-green">%3s</span>" %4s<span class="color-green">%5s</span>.</p>
                     <span class="xs-separetor v2"></span>
                 </div>' ,
-                __('Make a donation', 'wp-fundraising'),
-                __('To learn more about make donate charity with us visit our', 'wp-fundraising'),
-                __('Contact us', 'wp-fundraising'),
-                __('site. By calling ', 'wp-fundraising'),
-                __('+44(0) 800 883 8450 ', 'wp-fundraising')
+                esc_html__('Make a donation', 'wp-fundraising'),
+                esc_html__('To learn more about make donate charity with us visit our', 'wp-fundraising'),
+                esc_html__('Contact us', 'wp-fundraising'),
+                esc_html__('site. By calling ', 'wp-fundraising'),
+                esc_html__('+44(0) 800 883 8450 ', 'wp-fundraising')
             )
         );
     }
@@ -273,34 +273,6 @@ if (!function_exists('wf_donate_modal_heading')) {
 if (!function_exists('wf_donate_now_button_text')) {
     function wf_donate_now_button_text()
     {
-        return apply_filters('wf_donate_now_button_text', __('Donate Now', 'wp-fundraising'));
+        return apply_filters('wf_donate_now_button_text', esc_html__('Donate Now', 'wp-fundraising'));
     }
 }
-//
-//if (!function_exists('wf_login_label')) {
-//    function wf_login_label()
-//    {
-//        return apply_filters('wf_login_label', __('Login', 'wp-fundraising'));
-//    }
-//}
-//
-//if (!function_exists('wf_login_button_text')) {
-//    function wf_login_button_text()
-//    {
-//        return apply_filters('wf_login_button_text', __('login now', 'wp-fundraising'));
-//    }
-//}
-//
-//if (!function_exists('wf_signup_label')) {
-//    function wf_signup_label()
-//    {
-//        return apply_filters('wf_signup_label', __('SignUp', 'wp-fundraising'));
-//    }
-//}
-//
-//if (!function_exists('wf_signup_button_text')) {
-//    function wf_signup_button_text()
-//    {
-//        return apply_filters('wf_signup_button_text', __('Signup', 'wp-fundraising'));
-//    }
-//}
