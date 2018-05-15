@@ -28,7 +28,7 @@ if (! class_exists('WP_Fundraising_Frontend_Campaign_Submit_Form')) {
                 $campaign_end_method = $campaign_contributor_table = $campaign_contributor_show = $campaign_country = $campaign_location = '';
 
                 if ( empty($_POST['wp_fundraising_terms_agree'])){
-                    die(json_encode(array('success'=> 0, 'message' => __('Please check terms condition', 'wp-fundraising'))));
+                    die(json_encode(array('success'=> 0, 'message' => esc_html__('Please check terms condition', 'wp-fundraising'))));
                 }
 
                 if ($_POST['wf_campaign_title']) {

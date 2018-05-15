@@ -51,9 +51,9 @@ if (have_posts()): ?>
 
                     //Get order sales value by product
 
-                    $days_remaining = apply_filters('date_expired_msg', __('Date expired', 'wp-fundraising'));
+                    $days_remaining = apply_filters('date_expired_msg', esc_html__('Date expired', 'wp-fundraising'));
                     if (wf_date_remaining(get_the_ID())){
-                        $days_remaining = apply_filters('date_remaining_msg', __(wf_date_remaining(get_the_ID()), 'wp-fundraising'));
+                        $days_remaining = apply_filters('date_remaining_msg', esc_html__(wf_date_remaining(get_the_ID()), 'wp-fundraising'));
                     }
 
 

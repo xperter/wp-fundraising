@@ -18,8 +18,8 @@ $max_page = $wp_query->max_num_pages;
             'current'   => $page_numb,
             'total'     => $max_page,
             'type'      => 'list',
-            'prev_text' => __('<span class="pagination-next"><i class="fa fa-angle-left"></i></span>', 'wp-fundraising'),
-            'next_text' => __('<span class="pagination-next"><i class="fa fa-angle-right"></i></span>', 'wp-fundraising'),
+            'prev_text' => esc_html__('<span class="pagination-next"><i class="fa fa-angle-left"></i></span>', 'wp-fundraising'),
+            'next_text' => esc_html__('<span class="pagination-next"><i class="fa fa-angle-right"></i></span>', 'wp-fundraising'),
         ) );
     ?>
 

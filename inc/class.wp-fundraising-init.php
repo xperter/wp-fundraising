@@ -32,6 +32,7 @@ if (! class_exists('WP_Fundraising_Init')) {
             if (get_option('wp_fundraising_is_used'))
                 return false;
 
+
             update_option( '_wp_fundraising_is_used'         , WP_FUNDRAISING_VERSION); //Insert plugin version name into Option
             update_option( '_wf_selected_theme',           'basic'); //Select a basic theme
             update_option( '_wf_enable_color_styling',        'off'); //Set check true at Enable color styling option for custom color layout.
@@ -180,7 +181,7 @@ if (! class_exists('WP_Fundraising_Init')) {
 
             $html = '';
             $html .= '<div class="notice notice-error is-dismissible">
-                    <p>' . __('WP Fundraising requires WooCommerce to be activated', 'wp-fundraising') . '</p>
+                    <p>' . esc_html__('WP Fundraising requires WooCommerce to be activated', 'wp-fundraising') . '</p>
                 </div>';
             echo $html;
         }
@@ -188,7 +189,7 @@ if (! class_exists('WP_Fundraising_Init')) {
         public static function wc_low_version(){
             $html = '';
             $html .= '<div class="notice notice-error is-dismissible">
-                        <p>'.__('Your WooCommerce version is below then 3.0, please update', 'wp-fundraising').'</p>
+                        <p>'.esc_html__('Your WooCommerce version is below then 3.0, please update', 'wp-fundraising').'</p>
                     </div>';
             echo $html;
         }

@@ -18,19 +18,19 @@ function wp_fundraising_dashboard_shortcode( $attr ){
         'campaigns' =>
             array(
                 'tab'             => 'campaigns',
-                'tab_name'        => __('My Campaigns','wp-fundraising'),
+                'tab_name'        => esc_html__('My Campaigns','wp-fundraising'),
                 'load_form_file'  => WP_FUNDRAISING_DIR_PATH.'templates/dashboard/campaigns.php'
             ),
         'my_account' =>
             array(
                 'tab'             => 'my_account',
-                'tab_name'        => __('My Account','wp-fundraising'),
+                'tab_name'        => esc_html__('My Account','wp-fundraising'),
                 'load_form_file'  => WP_FUNDRAISING_DIR_PATH.'templates/dashboard/account.php'
             ),
         'address' =>
             array(
                 'tab'             => 'address',
-                'tab_name'        => __('Address','wp-fundraising'),
+                'tab_name'        => esc_html__('Address','wp-fundraising'),
                 'load_form_file'  => WP_FUNDRAISING_DIR_PATH.'templates/dashboard/address.php'
             ),
     ));

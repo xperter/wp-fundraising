@@ -37,9 +37,9 @@ if ($total_raised){
 //Get order sales value by product
 $sales_value_by_product = 0;
 
-$days_remaining = apply_filters('date_expired_msg', __('Date expired', 'wp-fundraising'));
+$days_remaining = apply_filters('date_expired_msg', esc_html__('Date expired', 'wp-fundraising'));
 if (wf_date_remaining(get_the_ID())){
-    $days_remaining = apply_filters('date_remaining_msg', __(wf_date_remaining(get_the_ID()), 'wp-fundraising'));
+    $days_remaining = apply_filters('date_remaining_msg', esc_html__(wf_date_remaining(get_the_ID()), 'wp-fundraising'));
 }
 $cols = $args['col'];
 $grid = 12/$cols;

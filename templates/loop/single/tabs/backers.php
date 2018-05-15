@@ -36,8 +36,8 @@ if ( $the_query->have_posts() ) :
         $html .= '<div class="fundpress-backer-info">';
 
 
-        $contributor_show   = get_post_meta( get_the_ID(), '_wf_mark_contributors_as_anonymous', true );
-        xs_print($contributor_show);
+        $contributor_show   = get_post_meta( $product_id, '_wf_mark_contributors_as_anonymous', true );
+
         if($contributor_show == 'yes'):
             $html .= '<h3 class="color-navy-blue semi-bold">'.esc_html__('Anonymous','wp-fundraising').'</h3>';
         else:
@@ -63,7 +63,7 @@ if ( $the_query->have_posts() ) :
 
 <?php
 else :
-    $html .= __( 'Sorry, no backer for this campaign.','wp-fundraising' );
+    $html .= esc_html__( 'Sorry, no backer for this campaign.','wp-fundraising' );
 endif;
 
 echo $html;
