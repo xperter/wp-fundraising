@@ -159,7 +159,7 @@ if (!class_exists('WP_FundRaising')) {
                 array(
                     'id'            => '_wf_funding_goal',
                     'label'         => esc_html__( 'Funding Goal ('.get_woocommerce_currency_symbol().')', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'Funding goal','wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'Funding goal','wp-fundraising' ),
                     'description'   => esc_html__('Enter the funding goal', 'wp-fundraising' ),
                     'desc_tip'      => true,
                     'type' 			=> 'text',
@@ -169,7 +169,7 @@ if (!class_exists('WP_FundRaising')) {
                 array(
                     'id'            => '_wf_duration_start',
                     'label'         => esc_html__( 'Start date', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'Start time of this campaign', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'Start time of this campaign', 'wp-fundraising' ),
                     'description'   => esc_html__( 'Enter start of this campaign', 'wp-fundraising' ),
                     'desc_tip'      => true,
                     'type' 			=> 'text',
@@ -179,7 +179,7 @@ if (!class_exists('WP_FundRaising')) {
                 array(
                     'id'            => '_wf_duration_end',
                     'label'         => esc_html__( 'End date', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'End time of this campaign', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'End time of this campaign', 'wp-fundraising' ),
                     'description'   => esc_html__( 'Enter end time of this campaign', 'wp-fundraising' ),
                     'desc_tip'      => true,
                     'type' 			=> 'text',
@@ -190,7 +190,7 @@ if (!class_exists('WP_FundRaising')) {
                 array(
                     'id'            => '_wf_funding_video',
                     'label'         => esc_html__( 'Video Url', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'Video url', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'Video url', 'wp-fundraising' ),
                     'desc_tip'      => true,
                     'description'   => esc_html__( 'Enter a video url to show your video in campaign details page', 'wp-fundraising' )
                 )
@@ -203,7 +203,7 @@ if (!class_exists('WP_FundRaising')) {
                     array(
                         'id'            => '_wf_funding_minimum_price',
                         'label'         => esc_html__('Minimum Price ('. get_woocommerce_currency_symbol().')', 'wp-fundraising'),
-                        'placeholder'   => esc_html__('Minimum Price','wp-fundraising'),
+                        'placeholder'   => esc_attr__('Minimum Price','wp-fundraising'),
                         'description'   => esc_html__('Enter the minimum price', 'wp-fundraising'),
                         'desc_tip'      => true,
                         'class'         => 'wc_input_price'
@@ -216,7 +216,7 @@ if (!class_exists('WP_FundRaising')) {
                     array(
                         'id'            => '_wf_funding_maximum_price',
                         'label'         => esc_html__('Maximum Price ('. get_woocommerce_currency_symbol() . ')', 'wp-fundraising'),
-                        'placeholder'   => esc_html__('Maximum Price','wp-fundraising'),
+                        'placeholder'   => esc_attr__('Maximum Price','wp-fundraising'),
                         'description'   => esc_html__('Enter the maximum price', 'wp-fundraising'),
                         'desc_tip'      => true,
                         'class'         =>'wc_input_price'
@@ -229,7 +229,7 @@ if (!class_exists('WP_FundRaising')) {
                     array(
                         'id'            => '_wf_funding_recommended_price',
                         'label'         => esc_html__('Recommended Price (' . get_woocommerce_currency_symbol() . ')', 'wp-fundraising'),
-                        'placeholder'   => esc_html__('Recommended Price', 'wp-fundraising'),
+                        'placeholder'   => esc_attr__('Recommended Price', 'wp-fundraising'),
                         'description'   => esc_html__('Enter the recommended price', 'wp-fundraising'),
                         'desc_tip'      => true,
                         'class'         => 'wc_input_price'
@@ -258,7 +258,7 @@ if (!class_exists('WP_FundRaising')) {
                     array(
                         'id' => '_wf_campaign_end_method',
                         'label' => esc_html__('Campaign End Method', 'wp-fundraising'),
-                        'placeholder' => esc_html__('Country', 'wp-fundraising'),
+                        'placeholder' => esc_attr__('Country', 'wp-fundraising'),
                         'class' => 'select2 _wf_campaign_end_method',
                         'options' => $options
                     )
@@ -299,7 +299,7 @@ if (!class_exists('WP_FundRaising')) {
                 array(
                     'id'            => '_wf_country',
                     'label'         => esc_html__( 'Country', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'Country', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'Country', 'wp-fundraising' ),
                     'class'         => 'select2 _wf_country',
                     'options'       => $countries
                 )
@@ -310,7 +310,7 @@ if (!class_exists('WP_FundRaising')) {
                 array(
                     'id'            => '_wf_location',
                     'label'         => esc_html__( 'Location', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'Location', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'Location', 'wp-fundraising' ),
                     'description'   => esc_html__( 'Location of this campaign','wp-fundraising' ),
                     'desc_tip'      => true,
                     'type'          => 'text'
@@ -730,7 +730,7 @@ if (!class_exists('WP_FundRaising')) {
                     </p>
                     <p class="form-field _wf_reward_ships_to_field ">
                         <label for="_wf_reward_ships_to"><?php esc_html_e('Ships To','wp-fundraising');?></label>
-                        <input type="text" placeholder="<?php esc_html_e('Anywhere in the world','wp-fundraising');?>" class="short" name="_wf_reward_ships_to[]" />
+                        <input type="text" placeholder="<?php echo esc_attr__('Anywhere in the world','wp-fundraising');?>" class="short" name="_wf_reward_ships_to[]" />
                     </p>
                     <p class="form-field _wf_reward_bg_color_field ">
                         <label for="_wf_reward_bg_color"><?php esc_html_e('Reward Card BG Color','wp-fundraising');?></label>
@@ -769,7 +769,7 @@ if (!class_exists('WP_FundRaising')) {
                     </p>
                     <p class="form-field _wf_reward_ships_to_field ">
                         <label for="_wf_reward_ships_to"><?php esc_html_e('Ships To','wp-fundraising');?></label>
-                        <input type="text" placeholder="<?php esc_html_e('Anywhere in the world','wp-fundraising');?>" class="short" name="_wf_reward_ships_to[]" />
+                        <input type="text" placeholder="<?php echo esc_attr__('Anywhere in the world','wp-fundraising');?>" class="short" name="_wf_reward_ships_to[]" />
                     </p>
                     <p class="form-field _wf_reward_bg_color_field ">
                         <label for="_wf_reward_bg_color"><?php esc_html_e('Reward Card BG Color','wp-fundraising');?></label>

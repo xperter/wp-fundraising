@@ -135,7 +135,7 @@ if (!class_exists('WP_FundRaising_Donation')) {
                 array(
                     'id'            => '_wfd_funding_goal',
                     'label'         => esc_html__( 'Donation Goal ('.get_woocommerce_currency_symbol().')', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'Donation goal','wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'Donation goal','wp-fundraising' ),
                     'description'   => esc_html__('Enter the funding goal', 'wp-fundraising' ),
                     'desc_tip'      => true,
                     'type' 			=> 'text',
@@ -145,7 +145,7 @@ if (!class_exists('WP_FundRaising_Donation')) {
                 array(
                     'id'            => '_wfd_duration_start',
                     'label'         => esc_html__( 'Start date', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'Start time of this campaign', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'Start time of this campaign', 'wp-fundraising' ),
                     'description'   => esc_html__( 'Enter start of this campaign', 'wp-fundraising' ),
                     'desc_tip'      => true,
                     'type' 			=> 'text',
@@ -155,7 +155,7 @@ if (!class_exists('WP_FundRaising_Donation')) {
                 array(
                     'id'            => '_wfd_duration_end',
                     'label'         => esc_html__( 'End date', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'End time of this campaign', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'End time of this campaign', 'wp-fundraising' ),
                     'description'   => esc_html__( 'Enter end time of this campaign', 'wp-fundraising' ),
                     'desc_tip'      => true,
                     'type' 			=> 'text',
@@ -166,7 +166,7 @@ if (!class_exists('WP_FundRaising_Donation')) {
                 array(
                     'id'            => '_wfd_donation_video',
                     'label'         => esc_html__( 'Video Url', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'Video url', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'Video url', 'wp-fundraising' ),
                     'desc_tip'      => true,
                     'description'   => esc_html__( 'Enter a video url to show your video in campaign details page', 'wp-fundraising' )
                 )
@@ -186,7 +186,7 @@ if (!class_exists('WP_FundRaising_Donation')) {
                 array(
                     'id'            => '_wfd_country',
                     'label'         => esc_html__( 'Country', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'Country', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'Country', 'wp-fundraising' ),
                     'class'         => 'select2 _wf_country',
                     'options'       => $countries
                 )
@@ -197,7 +197,7 @@ if (!class_exists('WP_FundRaising_Donation')) {
                 array(
                     'id'            => '_wfd_location',
                     'label'         => esc_html__( 'Location', 'wp-fundraising' ),
-                    'placeholder'   => esc_html__( 'Location', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'Location', 'wp-fundraising' ),
                     'description'   => esc_html__( 'Location of this campaign','wp-fundraising' ),
                     'desc_tip'      => true,
                     'type'          => 'text'
