@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-    global $post;
+global $post;
 
 // Get current page URL 
 $wfSocialURL = urlencode(get_permalink());
@@ -24,24 +24,24 @@ $pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$wfSocialURL.'&a
 
 
 ?>
-    <div class="xs-single-sidebar xs-mb-50">
-        <div class="xs-social-list-wraper">
-            <ul class="xs-social-list xs-social-list-v3 fundpress-social-list">
-                <?php if (wf_get_option('_wf_enable_facebook', 'wf_social_share')=='on') { ?>
-                    <li><a href="<?php echo $facebookURL;?>" class="color-facebook xs-box-shadow full-round"><i class="fa fa-facebook"></i></a></li>
-                <?php } ?>
-                <?php if (wf_get_option('_wf_enable_googleplus', 'wf_social_share')=='on') { ?>
-                    <li><a href="<?php echo $googleURL;?>" class="xs-box-shadow color-google-plus full-round"><i class="fa fa-google-plus"></i></a></li>
-                <?php } ?>
-                <?php if (wf_get_option('_wf_enable_twitter', 'wf_social_share')=='on') { ?>
-                    <li><a href="<?php echo $twitterURL;?>" class="xs-box-shadow color-twitter full-round"><i class="fa fa-twitter"></i></a></li>
-                <?php } ?>
-                <?php if (wf_get_option('_wf_enable_pinterest', 'wf_social_share')=='on') { ?>
-                    <li><a href="<?php echo $pinterestURL;?>" class="xs-box-shadow color-navy-blue full-round"><i class="fa fa-pinterest"></i></a></li>
-                <?php } ?>
-                <?php if (wf_get_option('_wf_enable_linkedin', 'wf_social_share')=='on') { ?>
-                    <li><a href="<?php echo $linkedInURL;?>" class="xs-box-shadow color-navy-blue full-round"><i class="fa fa-pinterest"></i></a></li>
-                <?php } ?>
-            </ul>
-        </div>
+<div class="xs-single-sidebar xs-mb-50">
+    <div class="xs-social-list-wraper">
+        <ul class="xs-social-list xs-social-list-v3 fundpress-social-list">
+            <?php if (wf_get_option('_wf_enable_facebook', 'wf_social_share')=='on') { ?>
+                <li><a href="<?php echo $facebookURL;?>" class="color-facebook xs-box-shadow full-round"><i class="fa fa-facebook"></i></a></li>
+            <?php } ?>
+            <?php if (wf_get_option('_wf_enable_googleplus', 'wf_social_share')=='on') { ?>
+                <li><a href="<?php echo $googleURL;?>" class="xs-box-shadow color-google-plus full-round"><i class="fa fa-google-plus"></i></a></li>
+            <?php } ?>
+            <?php if (wf_get_option('_wf_enable_twitter', 'wf_social_share')=='on') { ?>
+                <li><a href="<?php echo $twitterURL;?>" class="xs-box-shadow color-twitter full-round"><i class="fa fa-twitter"></i></a></li>
+            <?php } ?>
+            <?php if (wf_get_option('_wf_enable_pinterest', 'wf_social_share')=='on') { ?>
+                <li><a href="<?php echo $pinterestURL;?>" class="xs-box-shadow color-navy-blue full-round"><i class="fa fa-pinterest"></i></a></li>
+            <?php } ?>
+            <?php if (wf_get_option('_wf_enable_linkedin', 'wf_social_share')=='on') { ?>
+                <li><a href="<?php echo $linkedInURL;?>" class="xs-box-shadow color-linkedin full-round"><i class="fa fa-linkedin"></i></a></li>
+            <?php } ?>
+        </ul>
     </div>
+</div>
