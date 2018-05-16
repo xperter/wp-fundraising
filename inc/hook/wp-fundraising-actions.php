@@ -70,12 +70,6 @@ class WP_Fundraising_Actions{
             'wf_wc_related_campaign' => array(
                 'wp_fundraising_related_campaign' => array(5),
             ),
-            'elementor/init' => array(
-                'WP_Fundraising_Actions::wf_elementor_init' => array(15),
-            ),
-            'elementor/widgets/widgets_registered' => array(
-                'WP_Fundraising_Actions::wf_shortcode_elements' => array(15),
-            ),
 
         );
 
@@ -106,22 +100,6 @@ class WP_Fundraising_Actions{
 
     }
 
-    static function wf_elementor_init(){
-
-        \Elementor\Plugin::$instance->elements_manager->add_category(
-            'charitious-elements',
-            [
-                'title' =>esc_html__( 'Charitious', 'charitious' ),
-                'icon' => 'fa fa-plug',
-            ],
-            1
-        );
-    }
-
-    static function wf_shortcode_elements($widgets_manager){
-        require_once WP_FUNDRAISING_DIR_PATH.'inc/widgets/wf-campaigns.php';
-        $widgets_manager->register_widget_type(new Elementor\WF_Campaigns_Widget());
-    }
     static function wp_fundraising_registration() {
         echo do_shortcode('[wp_fundraising_registration]');
     }

@@ -12,6 +12,10 @@ class WF_Campaigns_Widget extends Widget_Base {
         return 'wf-campaigns';
     }
 
+
+    public function get_categories() {
+        return [ 'wf-elements' ];
+    }
     public function get_title() {
         return esc_html__( 'WP Fundraising Campaigns', 'wp-fundraising' );
     }
