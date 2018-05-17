@@ -9,9 +9,8 @@ echo '<script src="https://www.google.com/recaptcha/api.js" async defer></script
 
 /** Output the reCAPTCHA form field. */
 function display_captcha() {
-echo '<div class="g-recaptcha" data-sitekey="6LcxwFkUAAAAAD0UE3XiJ6wROZqgh9nRPWteVqbr"></div>';
+    echo '<div class="g-recaptcha" data-sitekey="'.wf_get_option('_wf_recaptcha_site_key', 'wf_recaptcha').'"></div>';
 }
-
 
 // adds the CAPTCHA to the login form
 
