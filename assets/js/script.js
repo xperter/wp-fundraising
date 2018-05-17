@@ -14,6 +14,8 @@
         var user_name 			= $("#xs_register_name").val();
         var user_email_address 	= $("#xs_register_email").val();
         var user_password 		= $("#xs_register_password").val();
+        var recaptcha           = $(".g-recaptcha-response", this).val();
+        console.log(recaptcha);
         var required = 0;
 
         $(".fundpress-required", this).each(function() {
@@ -34,6 +36,11 @@
                 }
             }
         });
+        if(recaptcha == null ||  recaptcha == '' || recaptcha == 'undifined'){
+            required = 1;
+            $('#wp_fundraising_msg').text('Please check the captcha form.');
+
+        }
         if (required === 0){
             $.ajax({
                 url : wp_fundraising_check_obj.ajaxurl,
@@ -44,6 +51,7 @@
                     user_name : user_name,
                     user_email_address : user_email_address,
                     user_password : user_password,
+                    recaptcha : recaptcha,
                     wp_fundraising_security : wp_fundraising_check_obj.ajax_nonce
                 },
                 success : function( response ) {
@@ -71,6 +79,8 @@
 
         var user_name           = $("#login_user_name").val();
         var user_password       = $("#login_user_pass").val();
+        var recaptcha           = $(".g-recaptcha-response", this).val();
+        console.log(recaptcha);
         var required = 0;
         
         $(".fundpress-required", this).each(function() {
@@ -91,6 +101,11 @@
                 }
             }
         });
+        if(recaptcha == null ||  recaptcha == '' || recaptcha == 'undifined'){
+            required = 1;
+            $('#wp_fundraising_msg').text('Please check the captcha form.');
+
+        }
         if (required === 0){
             $.ajax({
                 url : wp_fundraising_check_obj.ajaxurl,
@@ -100,6 +115,7 @@
                     action : 'wp_fundraising_login',
                     user_name : user_name,
                     user_password : user_password,
+                    recaptcha : recaptcha,
                     wp_fundraising_security : wp_fundraising_check_obj.ajax_nonce
                 },
                 success : function( response ) {

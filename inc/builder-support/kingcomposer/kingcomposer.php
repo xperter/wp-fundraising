@@ -20,5 +20,6 @@ if ( is_plugin_active( 'kingcomposer/kingcomposer.php' ) ) {
     require_once ( 'shortcodes/wf_kc_login_btn/wf-kc-login-btn-shortcode.php' );
     require_once ( 'shortcodes/wf_kc_donate_btn/wf-kc-donate-btn-shortcode.php' );
     require_once ( 'shortcodes/wf_kc_donate_form/wf-kc-donate-form-shortcode.php' );
+    require_once ( 'shortcodes/wf_kc_registration_form/wf-kc-registration-form-shortcode.php' );
     require_once ( 'shortcodes/wf_kc_dashboard/wf-kc-dashboard-shortcode.php' );
 }

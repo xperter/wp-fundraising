@@ -28,5 +28,8 @@ if (class_exists ( 'WPBakeryShortCode' )) {
         include_once WP_FUNDRAISING_DIR_PATH . 'inc/builder-support/js_composer/shortcodes/wf-dashboard.php';
         add_shortcode('wf_vc_dashboard', 'wf_vc_dashboard');
 
+        include_once WP_FUNDRAISING_DIR_PATH . 'inc/builder-support/js_composer/shortcodes/wf-registration-form.php';
+        add_shortcode('wf_vc_registration_form', 'wf_vc_registration_form');
+
     }
 }

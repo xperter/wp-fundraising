@@ -61,12 +61,15 @@ class WP_Fundraising_Registration_Function{
             $user_name = isset($_POST['user_name']) ? $_POST['user_name'] : '';
             $user_email_address = isset($_POST['user_email_address']) ? $_POST['user_email_address'] : '';
             $user_password = isset($_POST['user_password']) ? $_POST['user_password'] : '';
-
+//            $captcha = isset($_POST['recaptcha']) ? $_POST['recaptcha'] : '';
+//
+//            if(!$captcha){
+//                $data['captcha_error'] = 'Please check the captcha form.';
+//            }
             if ( email_exists( $user_email_address ) ){
                 $data['status'] = 'error';
                 $data['msg'] = 'Email already exists!';
             }
-
             if ( username_exists( $user_name ) ){
                 $data['status'] = 'error';
                 $data['msg'] = 'User Name already exists!';
@@ -103,6 +106,16 @@ class WP_Fundraising_Registration_Function{
             $user_name 		= sanitize_user($_POST['user_name']);
             $user_password 	= $_POST['user_password'];
             $user = get_user_by( 'login', $user_name );
+
+
+
+            $captcha = isset($_POST['recaptcha']) ? $_POST['recaptcha'] : '';
+
+            if(!$captcha){
+                $data['captcha_error'] = 'Please check the captcha form.';
+            }
+
+
 
             if ( ! $user && strpos( $user_name, '@' ) ) {
                 $user = get_user_by( 'email', $user_name );

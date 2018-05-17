@@ -55,6 +55,9 @@ class WF_Shortcode{
         require_once WP_FUNDRAISING_DIR_PATH.'inc/builder-support/elementor/wf-dashboard.php';
         $widgets_manager->register_widget_type(new Elementor\WF_Dashboard_Widget());
 
+        require_once WP_FUNDRAISING_DIR_PATH.'inc/builder-support/elementor/wf-registration-form.php';
+        $widgets_manager->register_widget_type(new Elementor\WF_Registration_Form_Widget());
+
     }
 	public static function wf_get_instance()
     {

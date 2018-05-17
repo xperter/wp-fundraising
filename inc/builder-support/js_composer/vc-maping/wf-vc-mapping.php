@@ -141,5 +141,11 @@ class WF_VC_Mapping
             "base" => "wf_vc_dashboard",
             "category" => __("WP Fundraising", "wp-fundraising"),
         ));
+
+        vc_map(array(
+            "name" => __("WF Login/Registration Form", "wp-fundraising"),
+            "base" => "wf_vc_registration_form",
+            "category" => __("WP Fundraising", "wp-fundraising"),
+        ));
     }
 }
