@@ -82,7 +82,7 @@ if (have_posts()): ?>
                                     }
                                     ?>
                                 </ul>
-                                <a href="#" class="d-block color-navy-blue fundpress-post-title"><?php the_title();?></a>
+                                <a href="<?php the_permalink();?>" class="d-block color-navy-blue fundpress-post-title"><?php the_title();?></a>
                                 <ul class="xs-list-with-content fundpress-list-item-content">
                                     <?php if ($funding_goal) { ?>
                                         <li><?php echo wc_price($funding_goal); ?><span><?php echo wf_archive_fund_goal_text(); ?></span></li>
