@@ -581,12 +581,6 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         $html .= '<div class="xs-campaing-from-submit-wraper">';
         $html .= '<hr>';
-        if (wf_get_option('_wf_enable_campaign_submit_recaptcha', 'wf_recaptcha')=='on') {
-            $html .= '<div class="form-group">';
-            ob_start();
-            do_action('campaign_form_captcha');
-            $html .= ob_get_clean();
-        }
 
         $html .= '<div class="form-group">';
         $html .= '<div class="custom-control">';

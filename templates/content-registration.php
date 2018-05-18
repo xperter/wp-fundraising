@@ -27,7 +27,6 @@
                             <i class="icon icon-key2"></i>
                             <input type="password" name="user_password" id="login_user_pass" class="fundpress-required xs-input-control" placeholder="<?php esc_attr_e('Enter your password','wp-fundraising');?>">
                         </div>
-                        <?php do_action('wf_login_recaptcha');?>
                         <div class="xs-submit-wraper xs-mb-20">
                             <input type="submit" name="submit" value="<?php echo wf_login_button_text(); ?>" id="xs_contact_get_action" class="btn btn-warning btn-block">
                         </div>
@@ -48,7 +47,6 @@
                             <i class="icon icon-key2"></i>
                             <input type="password" name="name" id="xs_register_password" class="fundpress-required xs-input-control" placeholder="<?php esc_attr_e('Enter your password','wp-fundraising');?>">
                         </div>
-                        <?php do_action('wf_registration_recaptcha');?>
                         <div class="xs-submit-wraper xs-mb-20">
                             <input type="submit" name="submit" value="<?php echo wf_signup_button_text(); ?>" id="xs_register_get_action" class="btn btn-warning btn-block">
                         </div>

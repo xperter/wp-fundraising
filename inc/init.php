@@ -42,7 +42,6 @@ include_once WP_FUNDRAISING_DIR_PATH.'inc/builder-support/elementor/elementor.ph
 include_once WP_FUNDRAISING_DIR_PATH.'inc/builder-support/unyson/unyson.php';
 include_once WP_FUNDRAISING_DIR_PATH.'inc/builder-support/kingcomposer/kingcomposer.php';
 include_once WP_FUNDRAISING_DIR_PATH.'inc/builder-support/kingcomposer/kingcomposer.php';
-include_once WP_FUNDRAISING_DIR_PATH.'inc/recaptcha/recaptcha.php';
 
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
     register_activation_hook(__FILE__, array('WP_Fundraising_Init', 'wf_plugin_init'));

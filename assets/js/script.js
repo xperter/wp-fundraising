@@ -14,8 +14,6 @@
         var user_name 			= $("#xs_register_name").val();
         var user_email_address 	= $("#xs_register_email").val();
         var user_password 		= $("#xs_register_password").val();
-        var recaptcha           = $(".g-recaptcha-response", this).val();
-        console.log(recaptcha);
         var required = 0;
 
         $(".fundpress-required", this).each(function() {
@@ -36,12 +34,7 @@
                 }
             }
         });
-        if(recaptcha != 'undifined'){
-            if(recaptcha == null ||  recaptcha == ''){
-                required = 1;
-                $('#wp_fundraising_msg').text('Please check the captcha form.');
-            }
-        }
+
         if (required === 0){
             $.ajax({
                 url : wp_fundraising_check_obj.ajaxurl,
@@ -80,8 +73,6 @@
 
         var user_name           = $("#login_user_name").val();
         var user_password       = $("#login_user_pass").val();
-        var recaptcha           = $(".g-recaptcha-response", this).val();
-        console.log(recaptcha);
         var required = 0;
         
         $(".fundpress-required", this).each(function() {
@@ -102,13 +93,6 @@
                 }
             }
         });
-
-        if(recaptcha != 'undifined'){
-            if(recaptcha == null ||  recaptcha == ''){
-                required = 1;
-                $('#wp_fundraising_msg').text('Please check the captcha form.');
-            }
-        }
 
         if (required === 0){
             $.ajax({

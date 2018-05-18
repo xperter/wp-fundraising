@@ -52,18 +52,6 @@
     if($('#campaign_form').length > 0) {
         $('#campaign_form').on('submit', function(e) {
             var error = false;
-            var recaptcha           = $(".g-recaptcha-response", this).val();
-            console.log(recaptcha);
-            if(recaptcha != 'undifined'){
-                if(recaptcha == null ||  recaptcha == ''){
-                    e.preventDefault();
-                    $('.recaptcha-checkbox-border').addClass('error');
-                }else{
-                    $('.recaptcha-checkbox-border').removeClass('error')
-                }
-            }
-
-
             $('#campaign_goal, #campaign_date, #campaign_end_date, #campaign_title').each(function(index){
                 var input = $(this);
                 if (input.val() === '') {
