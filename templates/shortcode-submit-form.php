@@ -581,17 +581,17 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         $html .= '<div class="xs-campaing-from-submit-wraper">';
         $html .= '<hr>';
-
-        $html .= '<div class="form-group">';
-        ob_start();
-        do_action('campaign_form_captcha');
-        $html .= ob_get_clean();
-
+        if (wf_get_option('_wf_enable_campaign_submit_recaptcha', 'wf_recaptcha')=='on') {
+            $html .= '<div class="form-group">';
+            ob_start();
+            do_action('campaign_form_captcha');
+            $html .= ob_get_clean();
+        }
 
         $html .= '<div class="form-group">';
         $html .= '<div class="custom-control">';
         $html .= '<input type="checkbox" class="custom-control-input" name="wp_fundraising_terms_agree" id="customCheck3">';
-        $html .= '<label class="custom-control-label" for="customCheck3">' . esc_html__("I agree with terms and conditions.", "wp-fundraising") . '</label>';
+        $html .= '<label class="custom-control-label" for="customCheck3">' . _x("I agree with <a href='".get_the_permalink(wf_get_option('_wf_terms_page_id', 'wf_advanced'))."'>terms and conditions.</a>", "wp-fundraising") . '</label>';
         $html .= '</div>';
         $html .= '</div>';
 

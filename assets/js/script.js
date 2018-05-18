@@ -36,10 +36,11 @@
                 }
             }
         });
-        if(recaptcha == null ||  recaptcha == '' || recaptcha == 'undifined'){
-            required = 1;
-            $('#wp_fundraising_msg').text('Please check the captcha form.');
-
+        if(recaptcha != 'undifined'){
+            if(recaptcha == null ||  recaptcha == ''){
+                required = 1;
+                $('#wp_fundraising_msg').text('Please check the captcha form.');
+            }
         }
         if (required === 0){
             $.ajax({
@@ -101,11 +102,14 @@
                 }
             }
         });
-        if(recaptcha == null ||  recaptcha == '' || recaptcha == 'undifined'){
-            required = 1;
-            $('#wp_fundraising_msg').text('Please check the captcha form.');
 
+        if(recaptcha != 'undifined'){
+            if(recaptcha == null ||  recaptcha == ''){
+                required = 1;
+                $('#wp_fundraising_msg').text('Please check the captcha form.');
+            }
         }
+
         if (required === 0){
             $.ajax({
                 url : wp_fundraising_check_obj.ajaxurl,

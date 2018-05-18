@@ -168,6 +168,14 @@ if ( !class_exists('WF_Menu_Settings' ) ):
                     ),
                     // #Listing Page Select
                     array(
+                        'name'        => '_wf_terms_page_id',
+                        'label'     => esc_html__('Select Terms & Conditions Page','wp-fundraising'),
+                        'desc'      => esc_html__('Select Fundraising Terms & Conditions Page.','wp-fundraising'),
+                        'type'      => 'select',
+                        'options'    => wf_get_published_pages(),
+                    ),
+                    // #Listing Page Select
+                    array(
                         'name'        => '_wf_listing_page_id',
                         'label'     => esc_html__('Select Listing Page','wp-fundraising'),
                         'desc'      => esc_html__('Select Fundraising Product Listing Page.','wp-fundraising'),
