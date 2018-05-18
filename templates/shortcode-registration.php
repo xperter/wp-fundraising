@@ -67,11 +67,17 @@ class WP_Fundraising_Registration_Shortcode{
         ob_start();
         ?>
         <div id="fundpress-lregister-wrapper">
-            <?php
-            if(!is_user_logged_in()){
-                require WP_FUNDRAISING_DIR_PATH. '/templates/content-registration.php';
-            }
-            ?>
+            <div class="modal xs-modal fade <?php echo wf_login_signup_modal_class();?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <?php
+                        if(!is_user_logged_in()){
+                            require WP_FUNDRAISING_DIR_PATH. '/templates/content-registration.php';
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
         </div>
         <?php
         return ob_get_clean();

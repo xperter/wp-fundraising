@@ -2290,6 +2290,7 @@ h1#ps_login_success a:hover {
 .xs-campaign .custom-control-input.error ~ .custom-control-label::before {
     border: 1px solid; }
 
+.xs-campaign .error,
 .xs-campaign input.error,
 .xs-campaign textarea.error,
 .xs-campaign select.form-control:not([size]):not([multiple]).error,
@@ -2827,4 +2828,28 @@ h1#ps_login_success a:hover {
 }
 .xs-donation-form{
     margin-bottom: 2rem;
+}
+
+
+.xs-modal .modal-dialog {
+    z-index: 99999;
+}
+
+#wp_fundraising_login_form .icon {
+    font-family: 'iconfont' !important;
+}
+
+#wp_fundraising_login_form [class^="icon-"]:before,#wp_fundraising_login_form [class*=" icon-"]:before{
+    font-family: 'iconfont' !important;
+}
+
+#fundpress-lregister-wrapper .nav-tabs{
+    margin-left: 0;
+    margin-bottom: 25px;
+}
+#fundpress-lregister-wrapper .nav-tabs .nav-link{
+
+}
+#fundpress-lregister-wrapper .nav-tabs .nav-link.active.show{
+
 }

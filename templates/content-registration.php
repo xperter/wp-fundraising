@@ -1,6 +1,4 @@
-<div class="modal xs-modal fade <?php echo wf_login_signup_modal_class();?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+
             <div class="fundpress-tab-nav-v5">
                 <h5 id="wp_fundraising_msg"></h5>
                 <ul class="nav nav-tabs" role="tablist">

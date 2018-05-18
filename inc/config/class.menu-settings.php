@@ -43,6 +43,10 @@ if ( !class_exists('WF_Menu_Settings' ) ):
                     'id'    => 'wf_advanced',
                     'title' => esc_html__( 'Advanced Options', 'wp-fundraising' )
                 ),
+                array(
+                    'id'    => 'wf_recaptcha',
+                    'title' => esc_html__( 'reCaptcha Options', 'wp-fundraising' )
+                ),
 
             );
             return $sections;
@@ -164,6 +168,14 @@ if ( !class_exists('WF_Menu_Settings' ) ):
                     ),
                     // #Listing Page Select
                     array(
+                        'name'        => '_wf_terms_page_id',
+                        'label'     => esc_html__('Select Terms & Conditions Page','wp-fundraising'),
+                        'desc'      => esc_html__('Select Fundraising Terms & Conditions Page.','wp-fundraising'),
+                        'type'      => 'select',
+                        'options'    => wf_get_published_pages(),
+                    ),
+                    // #Listing Page Select
+                    array(
                         'name'        => '_wf_listing_page_id',
                         'label'     => esc_html__('Select Listing Page','wp-fundraising'),
                         'desc'      => esc_html__('Select Fundraising Product Listing Page.','wp-fundraising'),
@@ -186,6 +198,37 @@ if ( !class_exists('WF_Menu_Settings' ) ):
                         'type'    => 'radio',
                         'options' => array( 'checkout_page' => 'Checkout Page', 'cart_page' => 'Cart Page', 'none' => 'None' ) ,
                         'default' => 'checkout_page',
+                    ),
+                ),
+                'wf_recaptcha' => array(
+                    array(
+                        'name'        => '_wf_recaptcha_site_key',
+                        'label'     => esc_html__('Enter your site  key','wp-fundraising'),
+                        'desc'     => _x('<a href="https://www.google.com/recaptcha/admin#list">Get site key from here</a>','wp-fundraising'),
+                        'type'      => 'text',
+                    ),
+                    array(
+                        'name'        => '_wf_recaptcha_secret_key',
+                        'label'     => esc_html__('Enter your secret  key','wp-fundraising'),
+                        'type'      => 'text',
+                    ),
+                    array(
+                        'name'  => '_wf_enable_login_recaptcha',
+                        'label' => esc_html__( 'Enable', 'wp-fundraising' ),
+                        'desc' => esc_html__( 'Enable reCaptcha for login ', 'wp-fundraising' ),
+                        'type'  => 'checkbox'
+                    ),
+                    array(
+                        'name'  => '_wf_enable_registration_recaptcha',
+                        'label' => esc_html__( 'Enable', 'wp-fundraising' ),
+                        'desc' => esc_html__( 'Enable reCaptcha for registration ', 'wp-fundraising' ),
+                        'type'  => 'checkbox'
+                    ),
+                    array(
+                        'name'  => '_wf_enable_campaign_submit_recaptcha',
+                        'label' => esc_html__( 'Enable', 'wp-fundraising' ),
+                        'desc' => esc_html__( 'Enable reCaptcha for campaign submit ', 'wp-fundraising' ),
+                        'type'  => 'checkbox'
                     ),
                 ),
 

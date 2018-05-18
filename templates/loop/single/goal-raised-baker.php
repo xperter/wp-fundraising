@@ -15,11 +15,11 @@ if ($total_raised){
 <div class="xs-single-sidebar xs-mb-30">
     <ul class="xs-list-with-content fundpress-simple-list-content">
         <?php if ($raised) { ?>
-            <li class="color-navy-blue bold xs-mb-20"><?php echo wf_price(number_format($raised)); ?><span class="color-semi-black regular"><?php echo wf_single_fund_raised_text(); ?></span></li>
+            <li class="color-navy-blue bold xs-mb-20"><?php echo wf_price(number_format($raised,wc_get_price_decimals(),wc_get_price_decimal_separator(), wc_get_price_thousand_separator())); ?><span class="color-semi-black regular"><?php echo wf_single_fund_raised_text(); ?></span></li>
         <?php } ?>
 
         <?php if ($funding_goal) { ?>
-            <li class="color-green bold xs-mb-20"><?php echo wf_price(number_format($funding_goal)); ?><span class="color-semi-black regular"><?php echo wf_single_fund_goal_text(); ?></span></li>
+            <li class="color-green bold xs-mb-20"><?php echo wf_price(number_format($funding_goal,wc_get_price_decimals(),wc_get_price_decimal_separator(), wc_get_price_thousand_separator())); ?><span class="color-semi-black regular"><?php echo wf_single_fund_goal_text(); ?></span></li>
         <?php } ?>
 
         <?php if ( $backers_count > 0 ) { ?>

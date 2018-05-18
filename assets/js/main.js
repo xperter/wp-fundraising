@@ -57,11 +57,14 @@
                 if (input.val() === '') {
                     e.preventDefault();
                     input.addClass('error');
+
                     error = true;
                 } else {
                     input.removeClass('error')
+
                 }
             });
+
             $('#customCheck3').each(function(index) {
                 var input = $(this);
                 if ($(this).is(':checked')){
