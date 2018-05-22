@@ -31,7 +31,7 @@ class WP_Fundraising_Actions{
             'wp_enqueue_scripts' => array(
                 'WP_Fundraising_Enqueue::wf_load_css',
                 'WP_Fundraising_Enqueue::wf_load_js',
-                'WP_Fundraising_Enqueue::add_ajax_donation_level',
+//                'WP_Fundraising_Enqueue::add_ajax_donation_level',
                 'WP_Fundraising_Enqueue::wf_localize_script',
             ),
             'admin_enqueue_scripts' => array(

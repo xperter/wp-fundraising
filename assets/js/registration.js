@@ -45,7 +45,6 @@
                     user_name : user_name,
                     user_email_address : user_email_address,
                     user_password : user_password,
-                    recaptcha : recaptcha,
                     wp_fundraising_security : wp_fundraising_check_obj.ajax_nonce
                 },
                 success : function( response ) {
@@ -103,7 +102,6 @@
                     action : 'wp_fundraising_login',
                     user_name : user_name,
                     user_password : user_password,
-                    recaptcha : recaptcha,
                     wp_fundraising_security : wp_fundraising_check_obj.ajax_nonce
                 },
                 success : function( response ) {

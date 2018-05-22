@@ -21,7 +21,6 @@ class WP_Fundraising_Enqueue {
 
         static::$css = array(
             'wf-bootstrap'=>  WP_FUNDRAISING_DIR_URL. 'assets/css/bootstrap.min.css',
-            'wf-font-awesome'=>  WP_FUNDRAISING_DIR_URL. 'assets/css/font-awesome.min.css',
             'wf-iconfont'=>  WP_FUNDRAISING_DIR_URL. 'assets/css/iconfont.css',
             'wf-style'=>  WP_FUNDRAISING_DIR_URL. 'assets/css/style.css'
 		);
