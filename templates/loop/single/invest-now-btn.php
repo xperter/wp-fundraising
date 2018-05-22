@@ -9,7 +9,7 @@ if ($product->get_type() == 'wp_fundraising') { ?>
         <div class="xs-single-sidebar">
             <div class="xs-btn-wraper">
                 <?php echo get_woocommerce_currency_symbol(); ?>
-                <input type="number" step="any" min="0" placeholder="100" name="wp_donate_amount_field" class="input-text amount wp_donate_amount_field text" value="100">
+                <input type="number" step="any" min="0" placeholder="<?php esc_attr_e('Amount','wp-fundraising');?>" name="wp_donate_amount_field" class="input-text amount wp_donate_amount_field text" value="<?php echo number_format(get_post_meta( $post->ID, '_wf_funding_recommended_price', true ),wc_get_price_decimals(),wc_get_price_decimal_separator(), wc_get_price_thousand_separator()); ?>">
                 <?php do_action('after_wf_donate_field'); ?>
                 <input type="hidden" value="<?php echo esc_attr($post->ID); ?>" name="add-to-cart">
                 <button type="submit" class="icon-btn xs-btn radius-btn green-btn xs-btn-medium <?php echo apply_filters('add_to_donate_button_class', 'wp_donate_button'); ?>"><?php echo wf_single_invest_now_button_text(); ?></button>

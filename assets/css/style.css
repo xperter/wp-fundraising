@@ -81,7 +81,7 @@ ul, li {
 .xs-skill-bar-v3 .xs-skill-track p, .xs-submit-btn, .xs-countdown-timer-v2 .timer-count, .woocommerce .xs-woocommerce-product-details-wraper .price .woocommerce-Price-currencySymbol, .woocommerce .xs-woocommerce-product-details-wraper .w-quantity-btn button, .fundpress-welcome-content .fundpress-welcome-wraper .fundpress-welcome-title h2, .fundpress-welcome-list-content li, .fundpress-heading-title h2, .fundpress-full-width-wraper .fundpress-product-hover-content .fundpress-sub-title h2, .fundpress-inner-welcome-section .fundpress-inner-welcome-content h2, .fundpress-inner-about-content h2, .fundpress-side-by-side-image-with-text .fundpress-inner-title h2, .fundpress-info-card h3, .fundpress-grid-item-content-v2 .fundpress-post-title, .fundpress-list-item-content-v2 li, .fundpress-list-item-content-v2 .number-percentage, .fundpress-list-item-content-v2 .xs-pie-chart-v2 span, .xs-pie-chart-v2 {
     font-weight: 700 !important; }
 
-.medium, .xs-text-tab-content h5, .xs-countdown-timer-v2 .timer-text, .xs_input_number input[type="number"], .woocommerce .xs-woocommerce-product-details-wraper .xs-product-single-summary h4, .xs-post-meta-date span, .fundpress-post-title.xs-extra-css, .fundpress-from-journal .xs-btn, .fundpress-title-text-content h4, .fundpresss-ingle-faq .xs-firstcharacter, .fundpress-simple-tag-v2 li, .xs-info-card-times h6, .fundpress-menu-v2 .nav-menu li a, .fundpress-welcome-content-v2 .fundpress-welcome-list-content li, .fundpress-welcome-content-v2 .xs-btn-wraper .btn-primary,
+.xs-countdown-timer-v2 .timer-text, .xs_input_number input[type="number"], .woocommerce .xs-woocommerce-product-details-wraper .xs-product-single-summary h4, .xs-post-meta-date span, .fundpress-post-title.xs-extra-css, .fundpress-from-journal .xs-btn, .fundpress-title-text-content h4, .fundpresss-ingle-faq .xs-firstcharacter, .fundpress-simple-tag-v2 li, .xs-info-card-times h6, .fundpress-menu-v2 .nav-menu li a, .fundpress-welcome-content-v2 .fundpress-welcome-list-content li, .fundpress-welcome-content-v2 .xs-btn-wraper .btn-primary,
 .fundpress-welcome-content-v2 .xs-btn-wraper .btn-outline-primary {
     font-weight: 500 !important; }
 
@@ -2847,9 +2847,12 @@ h1#ps_login_success a:hover {
     margin-left: 0;
     margin-bottom: 25px;
 }
-#fundpress-lregister-wrapper .nav-tabs .nav-link{
 
+.xs-social-list.xs-social-list-v3 li a.color-linkedin:hover,
+.xs-social-list.xs-social-list-v3 li a.color-linkedin{
+    background-color: #0073b1
 }
-#fundpress-lregister-wrapper .nav-tabs .nav-link.active.show{
-
+.xs-social-list.xs-social-list-v3 li a.color-linkedin:hover,
+.xs-social-list.xs-social-list-v3 li a.color-linkedin{
+    background-color: #0073b1
 }
