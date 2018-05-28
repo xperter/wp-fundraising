@@ -280,14 +280,6 @@ if ( !function_exists( 'wf_override_checkout_fields' ) ) {
                 if (($product->get_type() == 'wp_fundraising') || ($product->get_type() == 'wf_donation') ) {
                     if (wf_get_option('_wf_hide_address_from_checkout', 'wf_advanced') == 'on') {
 
-//                        unset($fields['billing']['billing_first_name']);
-//                        unset($fields['billing']['billing_last_name']);
-//                        unset($fields['billing']['billing_city']);
-//                        unset($fields['billing']['billing_phone']);
-//                        unset($fields['billing']['billing_email']);
-//                        unset($fields['billing']['billing_country']);
-
-
                         unset($fields['billing']['billing_company']);
                         unset($fields['billing']['billing_address_1']);
                         unset($fields['billing']['billing_address_2']);

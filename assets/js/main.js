@@ -312,7 +312,7 @@
                 + '<span class="timer-count">%-D <span class="timer-text">Days</span></span>  '
                 + '<span class="timer-count">%H <span class="timer-text">Hours</span></span> '
                 + '<span class="timer-count">%M <span class="timer-text">Minutes</span></span> '
-                + '<span class="timer-count">%S <span class="timer-text">Secods</span></span>'));
+                + '<span class="timer-count">%S <span class="timer-text">Seconds</span></span>'));
         });
     });
 
@@ -325,7 +325,7 @@
                 + '<div class="xs-timer-container"><span class="timer-count">%-D </span><span class="timer-text">Days</span></div>'
                 + '<div class="xs-timer-container"><span class="timer-count">%H </span><span class="timer-text">Hours</span></div>'
                 + '<div class="xs-timer-container"><span class="timer-count">%M </span><span class="timer-text">Minutes</span></div>'
-                + '<div class="xs-timer-container"><span class="timer-count">%S </span><span class="timer-text">Secods</span></div>'));
+                + '<div class="xs-timer-container"><span class="timer-count">%S </span><span class="timer-text">Seconds</span></div>'));
         });
     });
 

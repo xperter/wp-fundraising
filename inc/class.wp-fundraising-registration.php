@@ -74,7 +74,7 @@ class WP_Fundraising_Registration{
      */
     public function wp_fundraising_enqueue_scripts(){
 
-        wp_enqueue_script('fundpress-registration-ajax', WP_FUNDRAISING_DIR_URL . 'assets/js/script.js', array('jquery'), '', true);
+        wp_enqueue_script('fundpress-registration-ajax', WP_FUNDRAISING_DIR_URL . 'assets/js/registration.js', array('jquery'), '', true);
 
         /*Ajax Call*/
         $params = array(
