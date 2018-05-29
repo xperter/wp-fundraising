@@ -1,5 +1,10 @@
 <?php
-
+// ensure is_plugin_active() exists (not on frontend)
+if( !function_exists('is_plugin_active') ) {
+			
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	
+}	
 if (class_exists ( 'WPBakeryShortCode' )) {
 
     if (is_plugin_active('js_composer/js_composer.php')) {
