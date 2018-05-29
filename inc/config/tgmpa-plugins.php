@@ -12,7 +12,7 @@ function _action_wp_fundraising_register_required_plugins() {
         array(
             'name'		 => esc_html__( 'WooCommerce', 'wp-fundraising' ),
             'slug'		 => 'woocommerce',
-            'force_activation'	 => true,
+            'force_activation'	 => false,
             'required'	 => true,
         ),
 	);
