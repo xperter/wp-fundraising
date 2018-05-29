@@ -21,6 +21,8 @@ include_once WP_FUNDRAISING_DIR_PATH.'inc/class.wp-fundraising-frontend-address-
 
 
 include_once WP_FUNDRAISING_DIR_PATH.'inc/config/class.menu-settings.php';
+include_once WP_FUNDRAISING_DIR_PATH.'libs/external/plugin-activator.php';
+include_once WP_FUNDRAISING_DIR_PATH.'inc/config/tgmpa-plugins.php';
 include_once WP_FUNDRAISING_DIR_PATH.'inc/wp-fundraising-core-functions.php';
 include_once WP_FUNDRAISING_DIR_PATH.'inc/wp-fundraising-template-functions.php';
 include_once WP_FUNDRAISING_DIR_PATH.'inc/hook/wp-fundraising-filters.php';
