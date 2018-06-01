@@ -143,7 +143,7 @@ $grid = 12/$cols;
             </div>
         </div>
 
-    <?php }else{ ?>
+    <?php }elseif($args['style'] == "3"){ ?>
         <div class="fundpress-grid-item-content-v2">
             <div class="fundpress-item-header">
                 <a href="<?php the_permalink();?>"><img src="<?php echo $image_link; ?>" alt=""></a>
@@ -180,6 +180,51 @@ $grid = 12/$cols;
             </div>
         </div>
 
+    <?php }else{ ?> 
+        <div class="xs-popular-item">
+            <div class="xs-item-header">
+                <img src="<?php echo $image_link; ?>" alt="img">
+            </div>
+            <div class="xs-item-content">
+                <?php
+                $categories = get_the_terms( get_the_ID(), 'product_cat' );
+                ?>
+                <ul class="xs-simple-tag">
+                    <?php
+                    foreach($categories as $category){
+                        ?><li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name; ?></a></li><?php
+                    }
+                    ?>
+                </ul>
+                <a href="<?php the_permalink();?>" class="xs-post-title"><?php the_title();?></a>
+                <ul class="xs-list-with-content">
+                    <li><strong><i class="icon-consult"></i><?php esc_html_e('Goal:','wp-fundraising');?></strong><span><?php echo wc_price($funding_goal); ?></span></li>
+                    <li><strong><i class="icon-chart22"></i><?php esc_html_e('Raised:','wp-fundraising');?></strong><span><?php echo wc_price($raised); ?></span></li>
+                </ul>
+                <div class="xs-skill-bar">
+                    <div class="xs-skill-track">
+                        <p><span class="number-percentage-count number-percentage" data-value="70" data-animation-duration="3500">0</span>%</p>
+                    </div>
+                </div>
+                <?php if($args['author'] == 'yes'){ ?>
+                    <div class="media">
+                    <?php
+                        $user = wp_get_current_user();
+
+                        if ( $user ) : ?>
+                        
+                        <div class="xs-round-avatar">
+                            <img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" alt="">
+                        </div>
+                        <div class="xs-avatar-title">
+                            <a href="<?php echo get_the_author_link();?>"><?php echo get_the_author(); ?></a>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+                
     <?php } ?>
 
 </div>

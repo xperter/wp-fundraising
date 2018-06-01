@@ -59,11 +59,11 @@ class WP_Fundraising_Donate_Form_Shortcode{
 
     public function wp_fundraising_show_donate_form_shortcode($atts, $content = NULL){
 
-        extract(shortcode_atts(
-                array(
-                    'name' => '',
-                ), $atts)
-        );
+        $args = shortcode_atts(array(
+            
+            'style'      => '1',
+        ), $atts );
+
         ob_start();
         ?>
         <div id="fundpress-donation-form-wrapper">
