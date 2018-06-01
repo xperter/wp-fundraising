@@ -107,8 +107,14 @@ function wp_fundraising_listing_shortcode($atts = array()){
 
                     //query_posts($query_args);
                     $xs_post = new WP_Query($query_args);
-                    if ($xs_post->have_posts()): ?>
+                    if ($xs_post->have_posts()): 
+
+                    ?>
+                    <?php if($args['style'] == '4'){ ?>
+                        <div class="row cause-card-v2 waypoint-tigger wp-fundraising-campains"> 
+                    <?php }else{ ?>
                         <div class="row waypoint-tigger wp-fundraising-campains">
+                    <?php } ?>
                             <?php while ($xs_post->have_posts()) : $xs_post->the_post();
                                 if($args['show'] == 'successful'):
                                     if(is_reach_target_goal()):
@@ -197,7 +203,11 @@ function wp_fundraising_listing_shortcode($atts = array()){
             //query_posts($query_args);
             $xs_posts = new WP_Query($query_args);
             if ($xs_posts->have_posts()): ?>
-                <div class="row waypoint-tigger wp-fundraising-campains">
+                <?php if($args['style'] == '4'){ ?>
+                        <div class="row cause-card-v2 waypoint-tigger wp-fundraising-campains"> 
+                    <?php }else{ ?>
+                        <div class="row waypoint-tigger wp-fundraising-campains">
+                    <?php } ?>
                     <?php while ($xs_posts->have_posts()) : $xs_posts->the_post();
                         if($args['show'] == 'successful'):
                             if(is_reach_target_goal()):

@@ -25,12 +25,31 @@ class WF_Donate_Form_Widget extends Widget_Base {
     }
 
     protected function _register_controls() {
+        $this->start_controls_section(
+            'section_tab',
+            [
+                'label' => esc_html__('Donate Form element', 'wp-fundraising'),
+            ]
+        );
+        $this->add_control(
+            'style',
+            [
+                'label'     => esc_html__( 'Style', 'wp-fundraising' ),
+                'type'      => Controls_Manager::SELECT,
+                'default'   => '1',
+                'options'   => [
+                    '1'     => esc_html__( 'style 1', 'wp-fundraising' ),
+                    '2'     => esc_html__( 'style 2', 'wp-fundraising' ),
+                ],
+            ]
+        );
 
+        $this->end_controls_section();
     }
 
     protected function render( ) {
-
-        echo do_shortcode('[wp_fundraising_donate_form]');
+        $style = $settings['style'];
+        echo do_shortcode('[wp_fundraising_donate_form style="'.$style.'"]');
     }
 
     protected function _content_template() { }

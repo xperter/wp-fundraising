@@ -3,7 +3,7 @@
     $campaign_id = wf_get_option('_wf_feature_campaign_id', 'wf_donation');
 
 ?>
-
+<?php if($args['style'] == "1"){ ?>
 <form enctype="multipart/form-data" method="post" class="cart xs-donation-form" >
     <div class="xs-input-group">
         <label for="xs-donate-name"><?php esc_html_e('Donation Amount ','wp-fundraising');?><span class="color-light-red">**</span></label>
@@ -34,3 +34,40 @@
     <input type="hidden" value="<?php echo esc_attr($campaign_id); ?>" name="add-to-cart">
     <button type="submit" class="btn btn-primary"><span class="badge"><i class="fa fa-heart"></i></span> <?php echo wf_donate_now_button_text(); ?></button>
 </form>
+<?php }else{ ?>
+    <div class="donation-form-content">
+        <form enctype="multipart/form-data" class="donation-from" method="post">
+            <div class="form-inline">
+                <select name="donation-info" id="donation-info" class="form-control">
+                        <option value="homeless">Homeless People</option>
+                        <option value="children">Children</option>
+                        <option value="food">Food</option>
+                    </select>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">$</div>
+                        </div>
+                        <input type="number" min="1" class="form-control" id="inlineFormInputGroup" placeholder="Amaunt">
+                    </div>
+                    <div class="select-amaunt-group">
+                        <span>Select Amount:</span>
+                        <?php foreach ( $donation_level_fields as $field ) { ?>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" name="amaunt" value="<?php echo esc_attr( $field['_wf_donation_level_amount'] ); ?>" class="custom-control-input">
+                                <label class="custom-control-label"><?php echo esc_attr( $field['_wf_donation_level_amount'] ); ?></label>
+                            </div>
+                        <?php } ?>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="amaunt-other" name="amaunt" class="custom-control-input">
+                            <label class="custom-control-label" for="amaunt-other">Other</label>
+                        </div>
+                    </div>
+            </div>
+            <div class="xs-btn-wraper">
+                <?php do_action('after_wf_donate_field'); ?>
+                <input type="hidden" value="<?php echo esc_attr($campaign_id); ?>" name="add-to-cart">
+                <button type="submit" class="donation-btn"><span class="badge"><i class="fa fa-heart"></i></span> <?php echo wf_donate_now_button_text(); ?></button>
+            </div>
+        </form>
+    </div>
+<?php } ?>
