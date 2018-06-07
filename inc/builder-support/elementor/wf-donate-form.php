@@ -38,8 +38,8 @@ class WF_Donate_Form_Widget extends Widget_Base {
                 'type'      => Controls_Manager::SELECT,
                 'default'   => '1',
                 'options'   => [
-                    '1'     => esc_html__( 'style 1', 'wp-fundraising' ),
-                    '2'     => esc_html__( 'style 2', 'wp-fundraising' ),
+                    '1'     => esc_html__( 'Style 1', 'wp-fundraising' ),
+                    '2'     => esc_html__( 'Style 2', 'wp-fundraising' ),
                 ],
             ]
         );
@@ -48,6 +48,7 @@ class WF_Donate_Form_Widget extends Widget_Base {
     }
 
     protected function render( ) {
+        $settings = $this->get_settings();
         $style = $settings['style'];
         echo do_shortcode('[wp_fundraising_donate_form style="'.$style.'"]');
     }

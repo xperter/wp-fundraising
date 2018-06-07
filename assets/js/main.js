@@ -114,6 +114,16 @@
         }
     });
 
+    $('.donation-from input[type="radio"]').on('change', function () {
+		if ($(this).is(':checked')) {
+            let value = parseInt($(this).next().text(), 10);
+			if (jQuery.type(value) === 'number') {
+				$('#inlineFormInputGroup').val(value).focus();
+			} else {
+				$('#inlineFormInputGroup').val(' ')
+			}
+		}
+	})
 
     $( "#xs-donate-name-modal" ).focus(function() {
         $('#xs-donate-charity-amount option[value=custom]').attr('selected','selected');
@@ -328,6 +338,5 @@
                 + '<div class="xs-timer-container"><span class="timer-count">%S </span><span class="timer-text">Seconds</span></div>'));
         });
     });
-
 
 })(jQuery);
