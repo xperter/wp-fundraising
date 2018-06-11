@@ -4,7 +4,7 @@
  * Plugin URI:https://xpeedstudio.com
  * Description: The ultimate WooCommerce supported fundraising Donation and Crowdfunding toolkit
  * Author: XpeedStudio
- * Version:1.0.3
+ * Version:1.0.4
  * License: GPL2+
  * Text Domain: wp-fundraising
  * WC requires at least: 3.0.0
@@ -20,7 +20,7 @@ define('WP_FUNDRAISING_VERSION', '1.0');
 require_once WP_FUNDRAISING_DIR_PATH.'inc/init.php';
 
 
-if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || is_plugin_active_for_network( 'woocommerce/woocommerce.php' )) {
     register_activation_hook(__FILE__, array('WP_Fundraising_Init', 'wf_plugin_init'));
     if (class_exists('WP_FundRaising')) {
         $WP_FundRaising = WP_FundRaising::wf_get_instance();

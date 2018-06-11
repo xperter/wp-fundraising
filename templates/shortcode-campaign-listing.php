@@ -7,7 +7,7 @@ function wp_fundraising_listing_shortcode($atts = array()){
     if( class_exists('WP_FundRaising') ){
 
         $args = shortcode_atts(array(
-            'cat'         => null,
+            'cat'         => '',
             'number'      => -1,
             'col'      => '3',
             'style'      => '1',

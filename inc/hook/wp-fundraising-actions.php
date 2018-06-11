@@ -81,7 +81,7 @@ class WP_Fundraising_Actions{
                 ),
             ));
         }
-         if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+         if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || is_plugin_active_for_network( 'woocommerce/woocommerce.php' )) {
              static::$hooks = array_merge(static::$hooks, array(
                  'plugins_loaded' => array(
                      'wf_product_type_register',

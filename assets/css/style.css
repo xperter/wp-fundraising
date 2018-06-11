@@ -2878,3 +2878,6 @@ h5.auth_error{
 h5.auth_success{
     background: #08c700;
 }
+.woocommerce-Price-currencySymbol{
+    display: inline-block !important;
+}
