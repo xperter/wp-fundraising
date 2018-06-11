@@ -45,12 +45,12 @@ $donation_level_fields = get_post_meta($campaign_id, 'repeatable_donation_level_
                 </div>
                 <div class="select-amaunt-group">
                     <span><?php esc_html_e('Select Amount:','wp-fundraising');?></span>
-                    <?php foreach ( $donation_level_fields as $field ) { ?>
+                    <?php $i = 1; foreach ( $donation_level_fields as $field ) { ?>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="amaunt-one" name="amaunt" class="custom-control-input">
-                        <label class="custom-control-label" for="amaunt-one"><?php echo esc_attr( $field['_wf_donation_level_amount'] ); ?></label>
+                        <input type="radio" id="amaunt-<?php echo esc_attr($i);?>" name="amaunt" class="custom-control-input">
+                        <label class="custom-control-label" for="amaunt-<?php echo esc_attr($i);?>"><?php echo esc_attr( $field['_wf_donation_level_amount'] ); ?></label>
                     </div>
-                    <?php } ?>
+                    <?php $i++; } ?>
                     <div class="custom-control custom-radio">
                         <input type="radio" id="amaunt-other" name="amaunt" class="custom-control-input">
                         <label class="custom-control-label" for="amaunt-other"><?php esc_html_e('Other','wp-fundraising');?></label>

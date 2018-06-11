@@ -88,7 +88,7 @@ $grid = 12/$cols;
                     <span class="xs-separetor border-separetor xs-separetor-v2 fundpress-separetor xs-mb-20 xs-mt-30"></span>
                     <div class="row xs-margin-0">
                         <div class="full-round fundpress-avatar">
-                            <?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
+                        <?php echo get_avatar( get_the_author_meta( 'ID' ), 100 );?>
                         </div>
                         <div class="xs-avatar-title">
                             <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><span><?php esc_html_e('By', 'wp-fundraising'); ?></span><?php echo get_the_author(); ?></a>
@@ -159,7 +159,7 @@ $grid = 12/$cols;
                         if ( $user ) :
                             ?>
                             <div class="full-round fundpress-avatar">
-                                <img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" />
+                            <?php echo get_avatar( get_the_author_meta( 'ID' ), 100 );?>
                             </div>
                         <?php endif; ?>
                         <div class="xs-avatar-title">
@@ -214,7 +214,7 @@ $grid = 12/$cols;
                         if ( $user ) : ?>
                         
                         <div class="xs-round-avatar">
-                            <img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" alt="">
+                        <?php echo get_avatar( get_the_author_meta( 'ID' ), 100 );?>
                         </div>
                         <div class="xs-avatar-title">
                             <a href="<?php echo get_the_author_link();?>"><?php echo get_the_author(); ?></a>
