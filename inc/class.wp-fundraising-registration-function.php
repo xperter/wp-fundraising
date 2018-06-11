@@ -205,7 +205,7 @@ class WP_Fundraising_Registration_Function{
 
         if(wp_mail($email, $suject, $msg, $headers)){
             if($msg_status == 'register'){
-                return 'Thank you for your registration';
+                return 'Thank you for your registration.you can login now';
             }else{
                 return 'Your password reset successfully.Please check your mail with login details.';
             }

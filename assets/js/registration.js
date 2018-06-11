@@ -30,7 +30,7 @@
         var required = 0;
 
         $(".fundpress-required", this).each(function () {
-            if ($(this).val() == '') {
+            if ($(this).val() === '') {
                 $(this).addClass('reqError');
                 required += 1;
             }
@@ -59,11 +59,11 @@
                 success: function (response) {
                     var response = JSON.parse(JSON.stringify(response));
                     console.log(response);
-                    if (response.status == 'success') {
-                        $('#wp_fundraising_msg').show().text(response.msg);
+                    if (response.status === 'success') {
+                        $('#wp_fundraising_msg').show().text(response.msg).addClass('auth_success');
                         $('#wp_fundraising_register_form')[0].reset();
                     } else {
-                        $('#wp_fundraising_msg').show().text(response.msg);
+                        $('#wp_fundraising_msg').show().text(response.msg).addClass('auth_error');
                     }
                 }
             });
@@ -84,7 +84,7 @@
         var required = 0;
 
         $(".fundpress-required", this).each(function () {
-            if ($(this).val() == '') {
+            if ($(this).val() === '') {
                 $(this).addClass('reqError');
                 required += 1;
             }
@@ -115,7 +115,7 @@
                     if (response.status === 'success') {
                         location.reload();
                     } else {
-                        $('#wp_fundraising_msg').show().text(response.msg);
+                        $('#wp_fundraising_msg').show().text(response.msg).addClass('auth_error');
                     }
                 }
             });
@@ -161,9 +161,10 @@
                 },
                 success: function (response) {
                     if (response.status === 'success') {
-                        $('#wp_fundraising_msg').show().text(response.msg);
+                        $('#wp_fundraising_msg').show().text(response.msg).addClass('auth_success');
                     } else {
-                        $('#wp_fundraising_msg').show().text(response.msg);
+                       // $('#wp_fundraising_msg').addClass('auth_error');
+                        $('#wp_fundraising_msg').show().text(response.msg).addClass('auth_error');
                     }
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
