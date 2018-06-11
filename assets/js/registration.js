@@ -112,7 +112,7 @@
                 success: function (response) {
                     var response = JSON.parse(JSON.stringify(response));
                     console.log(response);
-                    if (response.status == 'success') {
+                    if (response.status === 'success') {
                         location.reload();
                     } else {
                         $('#wp_fundraising_msg').show().text(response.msg);
@@ -128,14 +128,14 @@
      *
      */
 
-    $('#ps_reset_password').on('submit', function (e) {
+    $('#wp_fundraising_reset_form').on('submit', function (e) {
         e.preventDefault();
 
         var reset_username = $("#reset_username").val();
         var required = 0;
 
-        $(".ps-required", this).each(function () {
-            if ($(this).val() == '') {
+        $(".fundpress-required", this).each(function () {
+            if ($(this).val() === '') {
                 $(this).addClass('reqError');
                 required += 1;
             }
@@ -151,22 +151,19 @@
         if (required === 0) {
             $("#ps_reset_submit").val('Processsing...');
             $.ajax({
-                url: ps_check_obj.ajaxurl,
+                url: wp_fundraising_check_obj.ajaxurl,
                 type: 'post',
                 dataType: 'Json',
                 data: {
-                    action: 'ps_resetpassword',
+                    action: 'wp_fundraising_resetpassword',
                     user_name: reset_username,
-                    ps_security: ps_check_obj.ajax_nonce
+                    wp_fundraising_security: wp_fundraising_check_obj.ajax_nonce
                 },
                 success: function (response) {
-                    if (response.status == 'success') {
-                        $("#ps_reset_submit").val('Reset');
-                        $('#ps_reset_msg').show().text(response.msg).css('color', 'green');
-                        $('#ps_reset_password')[0].reset();
+                    if (response.status === 'success') {
+                        $('#wp_fundraising_msg').show().text(response.msg);
                     } else {
-                        $('#ps_reset_msg').show().text(response.msg).css('color', 'red');
-                        $("#ps_reset_submit").val('Reset');
+                        $('#wp_fundraising_msg').show().text(response.msg);
                     }
                 },
                 error: function (jqXHR, textStatus, errorThrown) {

@@ -2860,3 +2860,9 @@ h1#ps_login_success a:hover {
     height: 25px;
     width: auto;
 }
+#wp_fundraising_reset_form{
+    display: none;
+}
+a.xs_login_switch{
+    display: none;
+}
