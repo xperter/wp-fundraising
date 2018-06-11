@@ -3,7 +3,7 @@ Contributors: xpeed
 Tags: fundraising, fund, donation, donations, crowdfunding, funding, crowd funding,  donate, donation plugin, wordpress donation plugin, fundraising plugin, nonprofit, nonprofits, charity, church, churches, backer, crowdfunding plugin, donation plugin, fund rising, kickstarter
 Requires at least: 4.6
 Tested up to: 4.9.6
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -193,7 +193,25 @@ Dashboard Filters:
 
 == Changelog ==
 
+= 1.0.4 =
+* Elementor support
+* donation form v2
+* Network activate issue solved
+* Invest button restriction to invalid campaiogn
+* Reset Password Option in Popup form
+
+= 1.0.3 =
+* TGMPA Plugin Activator for WooCommerce
+* force activation false
 * initial release
+* builder support: wpbeakery | unyson | elementor | kingcomposer 
+* number format fixed
+
+= 1.0.2 =
+
+* sanitize | escape | translate | small issues | remove commented code
+
+
 
 == Upgrade Notice ==
 Work with Woocommerce 3.0+
