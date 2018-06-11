@@ -172,7 +172,7 @@ class WP_Fundraising_Registration_Function{
                 wp_set_password( $user_password, $user->data->ID);
                 $data['status'] = 'success';
                 $error_msg = 'Password reset successfully but system could not send you email with login detail, please contact site admin';
-                $data['msg'] = $this->wp_fundraising_sendmail(sanitize_email($user_email_address), "Password Reset", "your password reset successfully.your login details.<br> Username: {$user_name}<br> password: {$user_password}", $error_msg, 'reset');
+                $data['msg'] = $this->wp_fundraising_sendmail(sanitize_email($user_email_address), "Password Reset", "your password reset successfully.your login details.<br> Username: {$user_name}<br> password: {$user_password}", 'reset');
             }
             else{
                 $data['status'] = 'error';
@@ -205,12 +205,12 @@ class WP_Fundraising_Registration_Function{
 
         if(wp_mail($email, $suject, $msg, $headers)){
             if($msg_status == 'register'){
-                return 'Thank you for your registration';
+                return 'Thank you for your registration.you can login now';
             }else{
                 return 'Your password reset successfully.Please check your mail with login details.';
             }
         }else{
-            return "Your registration is completed but your server not able to send massage";
+            return "Your server not able to send mail";
         }
 
     }

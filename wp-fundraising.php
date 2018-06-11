@@ -7,6 +7,8 @@
  * Version:1.0.4
  * License: GPL2+
  * Text Domain: wp-fundraising
+ * WC requires at least: 3.0.0
+ * WC tested up to: 3.4.0
  * Domain Path: /languages/
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
