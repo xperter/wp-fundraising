@@ -3,7 +3,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 global $post, $woocommerce, $product;
 $currency = '$';
-if ($product->get_type() == 'wp_fundraising') { ?>
+if ($product->get_type() == 'wp_fundraising') { 
+if(is_campaign_valid($post->ID)){
+?>
 
     <form enctype="multipart/form-data" method="post" class="cart">
         <div class="xs-single-sidebar">
@@ -17,7 +19,7 @@ if ($product->get_type() == 'wp_fundraising') { ?>
         </div>
     </form>
 
-<?php }elseif ($product->get_type() == 'wf_donation') { ?>
+<?php } }elseif ($product->get_type() == 'wf_donation') { ?>
     <form enctype="multipart/form-data" method="post" class="cart xs-donation-form" >
         <div class="xs-input-group">
             <label for="xs-donate-name"><?php esc_html_e('Donation Amount ','wp-fundraising');?><span class="color-light-red">**</span></label>

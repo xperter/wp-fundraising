@@ -138,7 +138,7 @@ $grid = 12/$cols;
                         </div>
                     </li>
                     <li><?php echo $backers_count; ?><span><?php echo wf_archive_backers_count_text(); ?></span></li>
-                    <li><span class="number-percentage-count number-percentage" data-value="<?php echo $raised_percent; ?>" data-animation-duration="3500">0</span>% <span><?php echo wf_archive_fund_raised_percent_text(); ?></span></li>
+                    <li><span><?php echo wc_price($raised); ?></span> <span><?php echo wf_archive_fund_raised_percent_text(); ?></span></li>
                 </ul>
             </div>
         </div>

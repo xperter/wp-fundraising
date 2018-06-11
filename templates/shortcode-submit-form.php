@@ -190,16 +190,16 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
         $html .= '<input type="text" class="form-control" name="wf_campaign_goal" id="campaign_goal" value="'.$campaign_goal.'">';
         $html .= '</div>';
 
-
-        //Minimum Amount
-        $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . esc_html__("Minimum Amount", "wp-fundraising") . '</span>';
-        $html .= '<div class="help-tip">';
-        $html .= '<p>' . esc_html__("Minimum campaign funding amount", "wp-fundraising") . '</p>';
-        $html .= '</div>';
-        $html .= '<input type="number" name="wf_campaign_min_amount" class="form-control" id="campaign_min_amount" value="'.$minimum_amount.'">';
-        $html .= '</div>';
-
+        if (wf_get_option('_wf_hide_min_price', 'wf_basics') != "on") {
+            //Minimum Amount
+            $html .= '<div class="form-group">';
+            $html .= '<span class="h3">' . esc_html__("Minimum Amount", "wp-fundraising") . '</span>';
+            $html .= '<div class="help-tip">';
+            $html .= '<p>' . esc_html__("Minimum campaign funding amount", "wp-fundraising") . '</p>';
+            $html .= '</div>';
+            $html .= '<input type="number" name="wf_campaign_min_amount" class="form-control" id="campaign_min_amount" value="'.$minimum_amount.'">';
+            $html .= '</div>';
+        }
 
         //Recomended Amount
         $html .= '<div class="form-group">';
@@ -247,7 +247,6 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
         $html .= '<select class="form-control" name="wf_campaign_end_method" id="campaign_end_method">';
 
         if (wf_get_option('_wf_hide_target_goal', 'wf_basics') != "on") {
-
             $selected = $campaign_end_method == 'target_goal' ? 'selected="selected"' : '';
             $html .= '<option value="target_goal" '.$selected.'>' . esc_html__("Target Goal", "wp-fundraising") . '</option>';
         }
@@ -267,16 +266,16 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
 
         $html .= '</select>';
         $html .= '</div>';
-
-        //Maximum Amount
-        $html .= '<div class="form-group">';
-        $html .= '<span class="h3">' . esc_html__("Maximum Amount", "wp-fundraising") . '</span>';
-        $html .= '<div class="help-tip">';
-        $html .= '<p>' . esc_html__("Maximum campaign funding amount", "wp-fundraising") . '</p>';
-        $html .= '</div>';
-        $html .= '<input type="number" name="wf_campaign_max_amount" class="form-control" id="campaign_max_amount" value="'.$maximum_amount.'">';
-        $html .= '</div>';
-
+        if (wf_get_option('_wf_hide_min_price', 'wf_basics') != "on") {
+            //Maximum Amount
+            $html .= '<div class="form-group">';
+            $html .= '<span class="h3">' . esc_html__("Maximum Amount", "wp-fundraising") . '</span>';
+            $html .= '<div class="help-tip">';
+            $html .= '<p>' . esc_html__("Maximum campaign funding amount", "wp-fundraising") . '</p>';
+            $html .= '</div>';
+            $html .= '<input type="number" name="wf_campaign_max_amount" class="form-control" id="campaign_max_amount" value="'.$maximum_amount.'">';
+            $html .= '</div>';
+        }
         //Predefined Pledge Amount
         $html .= '<div class="form-group">';
         $html .= '<span class="h3">' . esc_html__("Predefined Pledge Amount", "wp-fundraising") . '</span>';
