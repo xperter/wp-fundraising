@@ -194,20 +194,23 @@ Dashboard Filters:
 == Changelog ==
 
 = 1.0.4 =
+Video Support in funding
+
+= 1.0.3 =
 * Elementor support
 * donation form v2
 * Network activate issue solved
 * Invest button restriction to invalid campaiogn
 * Reset Password Option in Popup form
 
-= 1.0.3 =
+= 1.0.2 =
 * TGMPA Plugin Activator for WooCommerce
 * force activation false
 * initial release
 * builder support: wpbeakery | unyson | elementor | kingcomposer 
 * number format fixed
 
-= 1.0.2 =
+= 1.0.1 =
 
 * sanitize | escape | translate | small issues | remove commented code
 
