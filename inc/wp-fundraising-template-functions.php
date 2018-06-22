@@ -278,7 +278,11 @@ if (!function_exists('wf_backers_count')) {
     function wf_backers_count($post_id)
     {
         $data_array = WP_Fundraising_Actions::wf_get_orders_ID_list_per_campaign($post_id);
-
+        if (!empty($data_array)) {
+            $data_array = $data_array;
+        }else{
+            $data_array = array ('0');
+        }
         $args = array(
             'post_type'     => 'shop_order',
             'post_status'   => array('wc-completed','wc-on-hold'),
@@ -286,7 +290,6 @@ if (!function_exists('wf_backers_count')) {
         );
 
         $count = count(get_posts( $args ));
-        //wp_reset_postdata();
         return $count;
     }
 }
@@ -398,5 +401,48 @@ if (!function_exists('wp_fundraising_output_evaluated_charities')) {
         $html = ob_get_clean();
         wp_reset_query();
         return $html;
+    }
+}
+
+
+if ( ! function_exists('wf_embeded_video')) {
+	function wf_embeded_video($url){
+		if (! empty($url)) {
+			$embeded = wp_oembed_get($url);
+
+			if ($embeded == false) {
+				$url = strtolower($url);
+
+				$format = '';
+				if (strpos($url, '.mp4')) {
+					$format = 'mp4';
+				} elseif (strpos($url, '.ogg')) {
+					$format = 'ogg';
+				} elseif (strpos($url, '.webm')) {
+					$format = 'WebM';
+				}
+
+				$embeded = '<video controls><source src="' . $url . '" type="video/' . $format . '">'.__('Your browser does not support the video tag.', 'wp-fundraising').'</video>';
+			}
+			return '<div class="wf-video-wrapper">' . $embeded . '</div>';
+		} else{
+			return false;
+		}
+	}
+}
+if ( ! function_exists('getYoutubeImage')) {
+    function getYoutubeImage($e){
+        //GET THE URL
+        $url = $e;
+
+        $queryString = parse_url($url, PHP_URL_QUERY);
+
+        parse_str($queryString, $params);
+
+        $v = $params['v'];  
+        //DISPLAY THE IMAGE
+        if(strlen($v)>0){
+            echo "<img src='http://i3.ytimg.com/vi/$v/default.jpg' width='600' />";
+        }
     }
 }

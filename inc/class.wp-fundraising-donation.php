@@ -164,7 +164,7 @@ if (!class_exists('WP_FundRaising_Donation')) {
 
             woocommerce_wp_text_input(
                 array(
-                    'id'            => '_wfd_donation_video',
+                    'id'            => '_wfd_funding_video',
                     'label'         => esc_html__( 'Video Url', 'wp-fundraising' ),
                     'placeholder'   => esc_attr__( 'Video url', 'wp-fundraising' ),
                     'desc_tip'      => true,

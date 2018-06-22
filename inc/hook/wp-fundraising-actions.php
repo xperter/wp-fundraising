@@ -62,7 +62,8 @@ class WP_Fundraising_Actions{
             ),
             'wf_wc_before_single_product_summary' => array(
                 'woocommerce_show_product_sale_flash' => array(10),
-                'woocommerce_show_product_images' => array(20),
+                'WP_Fundraising_Actions::wf_campaign_single_feature_image' => array(15),
+                // 'woocommerce_show_product_images' => array(20),
             ),
             'wf_wc_after_single_product_summary' => array(
                 'woocommerce_output_product_data_tabs' => array(5),
@@ -99,7 +100,9 @@ class WP_Fundraising_Actions{
 
 
     }
-
+    static function wf_campaign_single_feature_image() {
+            wf_get_template_part('loop/single/feature-image');
+        }
     static function wp_fundraising_registration() {
         echo do_shortcode('[wp_fundraising_registration]');
     }
