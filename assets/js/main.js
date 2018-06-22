@@ -3,57 +3,57 @@
 
 
     // campaign-form js
-    if ($('#addMore-btn').length > 0) {
-        $('#addMore-btn').on('click', function(event) {
+    if (jQuery('#addMore-btn').length > 0) {
+        jQuery('#addMore-btn').on('click', function(event) {
             event.preventDefault();
-            $(".xs-reward-input-filed:last").clone(true).insertBefore(this).addClass('clone');
-            var lengt = $('.xs-reward-input-filed').length;
+            jQuery(".xs-reward-input-filed:last").clone(true).insertBefore(this).addClass('clone');
+            var lengt = jQuery('.xs-reward-input-filed').length;
             if (lengt > 1) {
-                $('.xs-reward-input-filed:first').addClass('clone');
+                jQuery('.xs-reward-input-filed:first').addClass('clone');
             }
-            $('.xs-reward-input-filed:last input, .xs-reward-input-filed:last textarea').each(function(){
-                if ($(this).val().length > 0)
-                    $(this).val('');
+            jQuery('.xs-reward-input-filed:last input, .xs-reward-input-filed:last textarea').each(function(){
+                if (jQuery(this).val().length > 0)
+                    jQuery(this).val('');
             });
         });
     }
 
-    if ($('#remove-btn').length > 0) {
-        $('#remove-btn').on('click', function() {
-            $(this).closest('.xs-reward-input-filed').remove();
-            var lengt = $('.xs-reward-input-filed').length;
+    if (jQuery('#remove-btn').length > 0) {
+        jQuery('#remove-btn').on('click', function() {
+            jQuery(this).closest('.xs-reward-input-filed').remove();
+            var lengt = jQuery('.xs-reward-input-filed').length;
             if (lengt == '1'){
-                $('.xs-reward-input-filed').removeClass('clone');
+                jQuery('.xs-reward-input-filed').removeClass('clone');
             }
         });
     }
 
-    if ($('#customFile').length > 0) {
-        $('#customFile').on('change', function(e) {
-            var getValue = $(this).val(),
+    if (jQuery('#customFile').length > 0) {
+        jQuery('#customFile').on('change', function(e) {
+            var getValue = jQuery(this).val(),
                 fileName = getValue.replace(/C:\\fakepath\\/i, '');
-            $(this).closest('.custom-file').find('.file-name').html(fileName);
+            jQuery(this).closest('.custom-file').find('.file-name').html(fileName);
         });
     }
 
     // dashboard form
-    if ($('.formEdit').length > 0 && $('.formCancel').length > 0) {
-        $('.formEdit').on('click', function(e) {
+    if (jQuery('.formEdit').length > 0 && jQuery('.formCancel').length > 0) {
+        jQuery('.formEdit').on('click', function(e) {
             e.preventDefault();
-            $(this).parent().parent().parent().addClass('isActive');
+            jQuery(this).parent().parent().parent().addClass('isActive');
         });
-        $('.formCancel').on('click', function(e) {
+        jQuery('.formCancel').on('click', function(e) {
             e.preventDefault();
-            $(this).parent().parent().parent().removeClass('isActive');
+            jQuery(this).parent().parent().parent().removeClass('isActive');
         });
     }
 
     // campaign form
-    if($('#campaign_form').length > 0) {
-        $('#campaign_form').on('submit', function(e) {
+    if(jQuery('#campaign_form').length > 0) {
+        jQuery('#campaign_form').on('submit', function(e) {
             var error = false;
-            $('#campaign_goal, #campaign_date, #campaign_end_date, #campaign_title').each(function(index){
-                var input = $(this);
+            jQuery('#campaign_goal, #campaign_date, #campaign_end_date, #campaign_title').each(function(index){
+                var input = jQuery(this);
                 if (input.val() === '') {
                     e.preventDefault();
                     input.addClass('error');
@@ -65,9 +65,9 @@
                 }
             });
 
-            $('#customCheck3').each(function(index) {
-                var input = $(this);
-                if ($(this).is(':checked')){
+            jQuery('#customCheck3').each(function(index) {
+                var input = jQuery(this);
+                if (jQuery(this).is(':checked')){
                     input.removeClass('error');
                 } else {
                     e.preventDefault();
@@ -81,57 +81,57 @@
 
     // Donation amount trigger
 
-    $("#xs-donate-charity").change(function(){
-        var val = $(this).val();
+    jQuery("#xs-donate-charity").change(function(){
+        var val = jQuery(this).val();
 
         if(val == 'custom'){
-            $("#xs-donate-name").val('');
+            jQuery("#xs-donate-name").val('');
         }else{
-            $("#xs-donate-name").val(val);
+            jQuery("#xs-donate-name").val(val);
         }
     });
 
-    $( "#xs-donate-name" ).focus(function() {
-        $('#xs-donate-charity option[value=custom]').attr('selected','selected');
+    jQuery( "#xs-donate-name" ).focus(function() {
+        jQuery('#xs-donate-charity option[value=custom]').attr('selected','selected');
     });
 
-    $("#xs-donate-charity-amount").change(function(){
-        var val = $(this).val();
+    jQuery("#xs-donate-charity-amount").change(function(){
+        var val = jQuery(this).val();
         if(val == 'custom'){
-            $("#xs-donate-name-modal").val('');
+            jQuery("#xs-donate-name-modal").val('');
         }else{
-            $("#xs-donate-name-modal").val(val);
+            jQuery("#xs-donate-name-modal").val(val);
         }
     });
 
 
-    $("#xs-donate-charity-amount-form").change(function(){
-        var val = $(this).val();
+    jQuery("#xs-donate-charity-amount-form").change(function(){
+        var val = jQuery(this).val();
         if(val == 'custom'){
-            $(".xs-donate-name-form").val('');
+            jQuery(".xs-donate-name-form").val('');
         }else{
-            $(".xs-donate-name-form").val(val);
+            jQuery(".xs-donate-name-form").val(val);
         }
     });
 
-    $('.donation-from input[type="radio"]').on('change', function () {
-		if ($(this).is(':checked')) {
-            let value = parseInt($(this).next().text(), 10);
+    jQuery('.donation-from input[type="radio"]').on('change', function () {
+		if (jQuery(this).is(':checked')) {
+            let value = parseInt(jQuery(this).next().text(), 10);
 			if (jQuery.type(value) === 'number') {
-				$('#inlineFormInputGroup').val(value).focus();
+				jQuery('#inlineFormInputGroup').val(value).focus();
 			} else {
-				$('#inlineFormInputGroup').val(' ')
+				jQuery('#inlineFormInputGroup').val(' ')
 			}
 		}
 	})
 
-    $( "#xs-donate-name-modal" ).focus(function() {
-        $('#xs-donate-charity-amount option[value=custom]').attr('selected','selected');
+    jQuery( "#xs-donate-name-modal" ).focus(function() {
+        jQuery('#xs-donate-charity-amount option[value=custom]').attr('selected','selected');
     });
 
 
-    $( ".xs-donate-name-form" ).focus(function() {
-        $('#xs-donate-charity-amount-form option[value=custom]').attr('selected','selected');
+    jQuery( ".xs-donate-name-form" ).focus(function() {
+        jQuery('#xs-donate-charity-amount-form option[value=custom]').attr('selected','selected');
     });
 
     /*==========================================================
@@ -179,10 +179,10 @@
             });
         } // End exists
 
-        var chart = $(".xs-pie-chart-v3");
+        var chart = jQuery(".xs-pie-chart-v3");
         if(chart.length > 0){
             chart.each(function () {
-                $(this).easyPieChart({
+                jQuery(this).easyPieChart({
                     easing: 'easeOutBounce',
                     barColor:'#011b58',
                     trackColor: '#F4F4F4',
@@ -193,14 +193,14 @@
                     duration: 5000,
                     enabled: true,
                     onStep: function(from, to, percent) {
-                        $(this.el).find('.xs-pie-chart-percent').text(Math.round(percent));
+                        jQuery(this.el).find('.xs-pie-chart-percent').text(Math.round(percent));
                     }
                 });
             });
         } // End exists
 
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
+        jQuery(function () {
+            jQuery('[data-toggle="tooltip"]').tooltip();
         })
     }
     jQuery(window).on('load', function() {
@@ -338,5 +338,29 @@
                 + '<div class="xs-timer-container"><span class="timer-count">%S </span><span class="timer-text">Seconds</span></div>'));
         });
     });
+
+    // product-thumbnail-lsit
+	if (jQuery('.wf-product-thumbnail').length > 0) {
+		let parent = jQuery('.wf-product-thumbnail'),
+		$this = jQuery('.product-thumbnail-lsit'),
+		child = $this.children(),
+		length = child.length;
+	
+		if (child.length > 1) {
+			child.css('max-width', (parent.outerWidth(true) / length));
+		}
+	}
+
+	if (jQuery('.wf-product-preview').length > 0) {
+		let parent = jQuery('.wf-product-preview'),
+            $this = jQuery('.single-product-video'),
+            child = jQuery('.single-product-video .woocommerce-product-gallery__image')
+			childs = $this.children(),
+			length = childs.length;
+	
+		if (child.length > 1) {
+			child.css('max-width', (parent.outerWidth(true) / length));
+        }
+    }
 
 })(jQuery);
