@@ -268,9 +268,13 @@ if (!function_exists('wf_get_fund_raised_percentFormat')) {
 }
 
 if (!function_exists('wf_price')) {
-    function wf_price($price)
-    {
-        return get_woocommerce_currency_symbol().number_format($price,wc_get_price_decimals(),wc_get_price_decimal_separator(), wc_get_price_thousand_separator());
+    function wf_price($price){
+        if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) )) {
+            return get_woocommerce_currency_symbol().number_format($price,wc_get_price_decimals(),wc_get_price_decimal_separator(), wc_get_price_thousand_separator());
+        }else{
+            return $price;
+        }
+        
     }
 }
 
