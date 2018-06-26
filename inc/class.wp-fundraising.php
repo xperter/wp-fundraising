@@ -175,16 +175,18 @@ if (!class_exists('WP_FundRaising')) {
                     'type' 			=> 'text',
                 )
             );
-            woocommerce_wp_text_input(
-                array(
-                    'id'            => '_wf_duration_end',
-                    'label'         => esc_html__( 'End date- mm/dd/yyyy', 'wp-fundraising' ),
-                    'placeholder'   => esc_attr__( 'End time of this campaign', 'wp-fundraising' ),
-                    'description'   => esc_html__( 'Enter end time of this campaign', 'wp-fundraising' ),
-                    'desc_tip'      => true,
-                    'type' 			=> 'text',
-                )
-            );
+            if (wf_get_option('_wf_hide_target_date', 'wf_basics')=='off') {
+                woocommerce_wp_text_input(
+                    array(
+                        'id'            => '_wf_duration_end',
+                        'label'         => esc_html__( 'End date- mm/dd/yyyy', 'wp-fundraising' ),
+                        'placeholder'   => esc_attr__( 'End time of this campaign', 'wp-fundraising' ),
+                        'description'   => esc_html__( 'Enter end time of this campaign', 'wp-fundraising' ),
+                        'desc_tip'      => true,
+                        'type' 			=> 'text',
+                    )
+                );
+            }
 
             woocommerce_wp_text_input(
                 array(
