@@ -1417,7 +1417,6 @@ ul, li {
     transition-delay: .7s;
     opacity: 1;
     top: 0%;
-    margin-left: -285px;
     left: 50%; }
 .xs-modal .fundpress-tab-nav-v5 {
     margin-bottom: 30px; }
@@ -2922,4 +2921,12 @@ h5.auth_success{
 
 .modal-backdrop {
     z-index: 99;
+}
+
+.xs-modal .modal-lg.modal-dialog {
+    margin-left: -400px;
+}
+
+.xs-modal .modal-dialog.modal-default {
+    margin-left: -285px;
 }

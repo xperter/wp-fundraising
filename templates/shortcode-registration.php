@@ -68,7 +68,7 @@ class WP_Fundraising_Registration_Shortcode{
         ?>
         <div id="fundpress-lregister-wrapper">
             <div class="modal xs-modal fade <?php echo wf_login_signup_modal_class();?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
+                <div class="modal-dialog modal-lg modal-default">
                     <div class="modal-content">
                         <?php
                         if(!is_user_logged_in()){
