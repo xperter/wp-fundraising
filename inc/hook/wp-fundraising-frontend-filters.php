@@ -111,6 +111,18 @@ if (!function_exists('wf_single_reward_ship_to_text')) {
         );
     }
 }
+if (!function_exists('wf_single_expired_text')) {
+    function wf_single_expired_text()
+    {
+        return apply_filters(
+            'wf_single_expired_text',
+            sprintf(
+                '<h5>%s</h5>' ,
+                esc_html__('This campaign is expired', 'wp-fundraising')
+            )
+        );
+    }
+}
 
 
 

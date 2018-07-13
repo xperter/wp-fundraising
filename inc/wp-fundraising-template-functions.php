@@ -166,7 +166,7 @@ if (!function_exists('wf_date_remaining')){
             $xs_product = $product;
         }
         if ($campaign_id == 0) $campaign_id = $post->ID;
-
+ 
         if ($xs_product->get_type() == 'wp_fundraising'){
             $enddate = get_post_meta( $campaign_id, '_wf_duration_end', true );
         }elseif ($xs_product->get_type() == 'wf_donation'){
@@ -188,6 +188,7 @@ if (!function_exists('is_campaign_valid')) {
     {
         global $post, $product;
         $xs_product = wc_get_product($campaign_id);
+        
         if($xs_product){
             $xs_product = $xs_product;
         }else{
@@ -196,7 +197,7 @@ if (!function_exists('is_campaign_valid')) {
         if ($xs_product->get_type() == 'wp_fundraising'){
             $campaign_end_method = get_post_meta($post->ID, '_wf_campaign_end_method', true);
         }elseif ($xs_product->get_type() == 'wf_donation'){
-            $campaign_end_method = get_post_meta($post->ID, '_wf_campaign_end_method', true);
+            $campaign_end_method = get_post_meta($post->ID, '_wfd_campaign_end_method', true);
         }else{
             $campaign_end_method = '';
         }
