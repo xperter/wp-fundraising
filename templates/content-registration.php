@@ -38,7 +38,7 @@
                             <input type="text" id="reset_username" class="fundpress-required xs-input-control" name="user_name" placeholder="<?php esc_attr_e('Enter your username','wp-fundraising');?>">
                         </div>
                         <div class="xs-submit-wraper xs-mb-20">
-                            <input type="submit" name="submit" value="Submit" id="xs_contact_get_action" class="btn btn-warning btn-block">
+                            <input type="submit" name="submit" value="Submit" id="xs_contact_get_action1" class="btn btn-warning btn-block">
                         </div>
                     </form>
 
