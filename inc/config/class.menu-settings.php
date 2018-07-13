@@ -101,6 +101,18 @@ if ( !class_exists('WF_Menu_Settings' ) ):
                         'desc'  => esc_html__( 'Disable Campaign Never End', 'wp-fundraising' ),
                         'type'  => 'checkbox'
                     ),
+                    array(
+                        'name'  => '_wf_hide_campaign_expiry_from_listing',
+                        'label' => esc_html__( 'Enable/Disable', 'wp-fundraising' ),
+                        'desc'  => esc_html__( 'Disable Expiry from Campaign Listing', 'wp-fundraising' ),
+                        'type'  => 'checkbox'
+                    ),
+                    array(
+                        'name'  => '_wf_hide_campaign_expiry_from_details',
+                        'label' => esc_html__( 'Enable/Disable', 'wp-fundraising' ),
+                        'desc'  => esc_html__( 'Disable Expiry from Campaign Details', 'wp-fundraising' ),
+                        'type'  => 'checkbox'
+                    ),
                 ),
                 'wf_donation' => array(
                     array(

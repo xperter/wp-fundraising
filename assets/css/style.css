@@ -373,6 +373,8 @@ ul, li {
 
 .xs-list-with-content{
     margin: 0;
+    display: flex;
+    justify-content: space-between;
 }
 .xs-list-with-content li {
     text-transform: capitalize;
