@@ -3,7 +3,7 @@ Contributors: xpeed
 Tags: fundraising, fund, donation, donations, crowdfunding, funding, crowd funding,  donate, donation plugin, wordpress donation plugin, fundraising plugin, nonprofit, nonprofits, charity, church, churches, backer, crowdfunding plugin, donation plugin, fund rising, kickstarter
 Requires at least: 4.6
 Tested up to: 4.9.6
-Stable tag: 1.0.3
+Stable tag: 1.0.6
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -16,7 +16,10 @@ WP Fundraising - Donation plugin and Crowdfunding fundraising Platform is a WooC
 
 
 Live demo [Here](https://demo.xpeedstudio.com/wp/fundpress/). 
-Need theme with our plugin? [You can purchase this premium theme](https://themeforest.net/item/crowdmerc-crowdfunding-startup-fundraising-wordpress-theme/21471812?ref=XpeedStudio). 
+Need theme with our plugin? You can check this premium theme 
+[Crowdmerc - Crowdfunding Startup Fundraising WordPress Theme](https://themeforest.net/item/crowdmerc-crowdfunding-startup-fundraising-wordpress-theme/21471812?ref=XpeedStudio). 
+And 
+[Charitious - NonProfit Fundraising Charity WordPress Theme](https://themeforest.net/item/charitious-charity-wordpress-theme/21872754?ref=XpeedStudio). 
 
 
 ###Documentation:###
@@ -192,6 +195,15 @@ Dashboard Filters:
 
 
 == Changelog ==
+
+= 1.0.6 =
+* Expired message in single fundraising campaign
+
+
+= 1.0.5 =
+* max min prize issue
+* billing info issue| backer tab issue
+
 
 = 1.0.4 =
 Video Support in funding
