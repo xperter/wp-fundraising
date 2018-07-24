@@ -48,7 +48,7 @@ class WF_Campaigns_Widget extends Widget_Base {
             [
                 'label'     => esc_html__( 'Style', 'wp-fundraising' ),
                 'type'      => Controls_Manager::SELECT,
-                'default'   => '1',
+                'default'   => '4',
                 'options'   => [
                     '1'     => esc_html__( 'style 1', 'wp-fundraising' ),
                     '2'     => esc_html__( 'style 2', 'wp-fundraising' ),
@@ -137,10 +137,13 @@ class WF_Campaigns_Widget extends Widget_Base {
         $count_col = $settings['count_col'];
         $post_count = $settings['post_count'];
         $style = $settings['style'];
+        
         $show_filter = $settings['show_filter'];
         $author = $settings['show_author'];
         $status = $settings['status'];
         $donation = $settings['donation'];
+
+        
         ?>
         <div class="xs-wp-fundraising-listing-style-<?php echo esc_attr($style);?>">
             <?php

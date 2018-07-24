@@ -44,6 +44,7 @@
 
                     <a href="#" class="xs_login_switch xs_switch"><?php echo esc_html__('Login','wp-fundraising'); ?></a>
                     <a href="#" class="xs_reset_switch xs_switch"><?php echo esc_html__('Reset Password','wp-fundraising'); ?></a>
+                    <?php do_action('wf_after_login_form');?>
                 </div><!-- tab-pane -->
 
                 <div role="tabpanel" class="tab-pane fadeInRights fade" id="signup">
@@ -64,6 +65,7 @@
                             <input type="submit" name="submit" value="<?php echo wf_signup_button_text(); ?>" id="xs_register_get_action" class="btn btn-warning btn-block">
                         </div>
                     </form>
+                    <?php do_action('wf_after_signup_form');?>
                 </div><!-- tab-pane -->
             </div><!-- tab-content -->
         </div>
