@@ -591,7 +591,7 @@ if (!class_exists('WP_FundRaising')) {
 
         public function wf_custom_override_paypal_email($paypal_args) {
             global $woocommerce;
-            $paypal_args['business'] = $this->wp_get_paypal_reciever_email_address();
+            $paypal_args['business'] = $this->wf_get_paypal_reciever_email_address();
             return $paypal_args;
         }
 

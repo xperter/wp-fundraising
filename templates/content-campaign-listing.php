@@ -79,15 +79,10 @@ $grid = 12/$cols;
                         <li><span class="number-percentage-count"><?php echo wc_price($raised); ?></span><span><?php echo wf_archive_fund_raised_text(); ?></span></li>
                     <?php } ?>
 
-                    <?php if ($days_remaining) {
-                        if (wf_get_option('_wf_hide_campaign_expiry_from_listing', 'wf_basics')=='off') {
-                    ?>
+                    <?php if ($days_remaining) { ?>
                         <li><?php echo $days_remaining; ?><span><?php echo wf_archive_days_remaining_text(); ?></span></li>
-                    <?php 
-                    } 
-                } ?>
+                    <?php } ?>
                 </ul>
-
 
                 <?php if($args['author'] == 'yes'){ ?>
                     <span class="xs-separetor border-separetor xs-separetor-v2 fundpress-separetor xs-mb-20 xs-mt-30"></span>

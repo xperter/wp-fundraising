@@ -35,7 +35,6 @@ function wp_fundraising_listing_shortcode($atts = array()){
 //        $categories = get_terms( $tax_args );
         $categories = get_wp_fundraising_product_cats();
         ob_start();
-
         if($args['filter'] == 'yes'){ ?>
 
             <div class="<?php if($args['style'] !='3'){ echo 'xs-tab-wraper'; } ?> fundpress-tab-wraper">

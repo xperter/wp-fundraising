@@ -202,7 +202,7 @@ class WP_Fundraising_Actions{
         $product = wc_get_product($post->ID);
         $show_contributor_table   = get_post_meta( $post->ID, '_wf_show_contributor_table', true );
         if($show_contributor_table == 'yes'):
-            if(($product->get_type() =='wp_fundraising') || ($product->get_type() =='wf_donation')){
+            if(($product->get_type() =='wp_fundraising')){
                 // Adds the new tab
                 $tabs['backers'] = array(
                     'title'     => wf_single_backers_tab_text(),
