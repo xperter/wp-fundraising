@@ -70,9 +70,6 @@ get_header(); ?>
      */
     do_action( 'wf_wc_after_main_loop' );
 ?>
-    <a href="" data-toggle="modal" data-target=".<?php echo wf_login_signup_modal_class();?>">
-        <?php esc_html_e('Log In','wp-fundraising');?>
-    </a>
 <?php get_footer();
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */
