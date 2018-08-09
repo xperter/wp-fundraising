@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: WP Fundraising -  Donation and Crowdfunding Platform
+ * Plugin Name: WP Fundraising - Donation and Crowdfunding Platform
  * Plugin URI:https://xpeedstudio.com
- * Description: The ultimate WooCommerce supported fundraising Donation and Crowdfunding toolkit
+ * Description: The ultimate WooCommerce supported fundraising Donation and Crowdfunding Platform
  * Author: XpeedStudio
- * Version:1.0.6
+ * Version:1.0.7
  * License: GPL2+
  * Text Domain: wp-fundraising
  * WC requires at least: 3.0.0
- * WC tested up to: 3.4.0
+ * WC tested up to: 3.8.0
  * Domain Path: /languages/
  */
 if ( ! defined( 'ABSPATH' ) ) exit;

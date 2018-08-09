@@ -59,7 +59,7 @@ if ( !class_exists('WF_Menu_Settings' ) ):
         function get_settings_fields() {
             $settings_fields = array(
                 'wf_basics' => array(
-                    array(
+                    array( 
                         'name'  => '_wf_hide_min_price',
                         'label' => esc_html__( 'Disable Minimum Price', 'wp-fundraising' ),
                         'desc'  => esc_html__( 'Disable minimum price option on the campaign submission form', 'wp-fundraising' ),
