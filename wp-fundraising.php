@@ -4,7 +4,7 @@
  * Plugin URI:https://xpeedstudio.com
  * Description: The ultimate WooCommerce supported fundraising Donation and Crowdfunding Platform
  * Author: XpeedStudio
- * Version:1.0.7
+ * Version:1.0.8
  * License: GPL2+
  * Text Domain: wp-fundraising
  * WC requires at least: 3.0.0
