@@ -166,7 +166,7 @@ if (!function_exists('wf_date_remaining')){
             $xs_product = $product;
         }
         if ($campaign_id == 0) $campaign_id = $post->ID;
-
+ 
         if ($xs_product->get_type() == 'wp_fundraising'){
             $enddate = get_post_meta( $campaign_id, '_wf_duration_end', true );
         }elseif ($xs_product->get_type() == 'wf_donation'){

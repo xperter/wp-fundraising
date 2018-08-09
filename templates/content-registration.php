@@ -38,12 +38,13 @@
                             <input type="text" id="reset_username" class="fundpress-required xs-input-control" name="user_name" placeholder="<?php esc_attr_e('Enter your username','wp-fundraising');?>">
                         </div>
                         <div class="xs-submit-wraper xs-mb-20">
-                            <input type="submit" name="submit" value="Submit" id="xs_contact_get_action" class="btn btn-warning btn-block">
+                            <input type="submit" name="submit" value="Submit" id="xs_contact_get_action1" class="btn btn-warning btn-block">
                         </div>
                     </form>
 
                     <a href="#" class="xs_login_switch xs_switch"><?php echo esc_html__('Login','wp-fundraising'); ?></a>
                     <a href="#" class="xs_reset_switch xs_switch"><?php echo esc_html__('Reset Password','wp-fundraising'); ?></a>
+                    <?php do_action('wf_after_login_form');?>
                 </div><!-- tab-pane -->
 
                 <div role="tabpanel" class="tab-pane fadeInRights fade" id="signup">
@@ -64,6 +65,7 @@
                             <input type="submit" name="submit" value="<?php echo wf_signup_button_text(); ?>" id="xs_register_get_action" class="btn btn-warning btn-block">
                         </div>
                     </form>
+                    <?php do_action('wf_after_signup_form');?>
                 </div><!-- tab-pane -->
             </div><!-- tab-content -->
         </div>

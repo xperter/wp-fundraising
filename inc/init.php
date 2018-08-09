@@ -38,6 +38,7 @@ include_once WP_FUNDRAISING_DIR_PATH.'templates/shortcode-donate-btn.php';
 include_once WP_FUNDRAISING_DIR_PATH.'templates/shortcode-donate-modal.php';
 include_once WP_FUNDRAISING_DIR_PATH.'templates/shortcode-donate-form.php';
 include_once WP_FUNDRAISING_DIR_PATH.'templates/shortcode-login-form.php';
+include_once WP_FUNDRAISING_DIR_PATH.'templates/shortcode-login-btn.php';
 
 include_once WP_FUNDRAISING_DIR_PATH.'inc/builder-support/js_composer/wf-shortcodes.php';
 include_once WP_FUNDRAISING_DIR_PATH.'inc/builder-support/elementor/elementor.php';

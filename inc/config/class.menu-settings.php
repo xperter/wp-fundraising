@@ -59,7 +59,7 @@ if ( !class_exists('WF_Menu_Settings' ) ):
         function get_settings_fields() {
             $settings_fields = array(
                 'wf_basics' => array(
-                    array(
+                    array( 
                         'name'  => '_wf_hide_min_price',
                         'label' => esc_html__( 'Disable Minimum Price', 'wp-fundraising' ),
                         'desc'  => esc_html__( 'Disable minimum price option on the campaign submission form', 'wp-fundraising' ),
@@ -99,6 +99,18 @@ if ( !class_exists('WF_Menu_Settings' ) ):
                         'name'  => '_wf_hide_campaign_never_end',
                         'label' => esc_html__( 'Enable/Disable', 'wp-fundraising' ),
                         'desc'  => esc_html__( 'Disable Campaign Never End', 'wp-fundraising' ),
+                        'type'  => 'checkbox'
+                    ),
+                    array(
+                        'name'  => '_wf_hide_campaign_expiry_from_listing',
+                        'label' => esc_html__( 'Enable/Disable', 'wp-fundraising' ),
+                        'desc'  => esc_html__( 'Disable Expiry from Campaign Listing', 'wp-fundraising' ),
+                        'type'  => 'checkbox'
+                    ),
+                    array(
+                        'name'  => '_wf_hide_campaign_expiry_from_details',
+                        'label' => esc_html__( 'Enable/Disable', 'wp-fundraising' ),
+                        'desc'  => esc_html__( 'Disable Expiry from Campaign Details', 'wp-fundraising' ),
                         'type'  => 'checkbox'
                     ),
                 ),

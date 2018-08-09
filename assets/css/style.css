@@ -373,6 +373,8 @@ ul, li {
 
 .xs-list-with-content{
     margin: 0;
+    display: flex;
+    justify-content: space-between;
 }
 .xs-list-with-content li {
     text-transform: capitalize;
@@ -2930,3 +2932,25 @@ h5.auth_success{
 .xs-modal .modal-dialog.modal-default {
     margin-left: -285px;
 }
+
+.video-popup-btn i{
+    font-family:'iconfont' !important;
+    padding-top: 30px;
+}
+.video-popup-btn {
+    display: block;
+    -webkit-box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.25);
+    width: 100px;
+    height: 100px;
+    line-height: 110px;
+    background-color: #2b3539;
+    border-radius: 50%;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 2.57143em;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+.video-popup-btn:hover {
+    color: #e23e57; }

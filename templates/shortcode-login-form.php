@@ -11,7 +11,7 @@ class WP_Fundraising_Login_Form_Shortcode{
      * @since 1.0
      *
      */
-    public static $_instance;
+    public static $_instance; 
     /**
      * Plugin Name
      *
