@@ -203,7 +203,7 @@ $grid = 12/$cols;
                 </ul>
                 <div class="xs-skill-bar">
                     <div class="xs-skill-track">
-                        <p><span class="number-percentage-count number-percentage" data-value="70" data-animation-duration="3500">0</span>%</p>
+                        <p><span class="number-percentage-count number-percentage" data-value="<?php echo $raised_percent; ?>" data-animation-duration="3500">0</span>%</p>
                     </div>
                 </div>
                 <?php if($args['author'] == 'yes'){ ?>
