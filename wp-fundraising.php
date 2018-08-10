@@ -11,6 +11,7 @@
  * WC tested up to: 3.8.0
  * Domain Path: /languages/
  */
+
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 define('WP_FUNDRAISING_DIR_PATH', plugin_dir_path(__FILE__));
