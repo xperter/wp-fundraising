@@ -168,7 +168,7 @@ if (!class_exists('WP_FundRaising')) {
             woocommerce_wp_text_input(
                 array(
                     'id'            => '_wf_duration_start',
-                    'label'         => esc_html__( 'Start date- mm/dd/yyyy', 'wp-fundraising' ),
+                    'label'         => esc_html__( 'Start date- dd/mm/yyyy', 'wp-fundraising' ),
                     'placeholder'   => esc_attr__( 'Start time of this campaign', 'wp-fundraising' ),
                     'description'   => esc_html__( 'Enter start of this campaign', 'wp-fundraising' ),
                     'desc_tip'      => true,
@@ -179,7 +179,7 @@ if (!class_exists('WP_FundRaising')) {
                 woocommerce_wp_text_input(
                     array(
                         'id'            => '_wf_duration_end',
-                        'label'         => esc_html__( 'End date- mm/dd/yyyy', 'wp-fundraising' ),
+                        'label'         => esc_html__( 'End date- dd/mm/yyyy', 'wp-fundraising' ),
                         'placeholder'   => esc_attr__( 'End time of this campaign', 'wp-fundraising' ),
                         'description'   => esc_html__( 'Enter end time of this campaign', 'wp-fundraising' ),
                         'desc_tip'      => true,
@@ -385,11 +385,11 @@ if (!class_exists('WP_FundRaising')) {
          */
         public function wf_hide_tab_panel( $tabs) {
 
-            $tabs['attribute']['class'] = 'hide_if_wf_fundraising';
-            $tabs['general']['class'] = 'hide_if_wf_fundraising';
-            $tabs['fundraising']['class'] = array( 'show_if_wf_fundraising','hide_if_external', 'hide_if_grouped', 'hide_if_simple', 'hide_if_variable' );
-            $tabs['reward']['class'] = array( 'show_if_wf_fundraising','hide_if_external', 'hide_if_grouped', 'hide_if_simple', 'hide_if_variable' );
-            $tabs['update']['class'] = array( 'show_if_wf_fundraising','hide_if_external', 'hide_if_grouped', 'hide_if_simple', 'hide_if_variable' );
+            $tabs['attribute']['class'] = array( 'hide_if_wf_fundraising','hide_if_wf_donation' );
+            $tabs['general']['class'] = array( 'hide_if_wf_fundraising','hide_if_wf_donation' );
+            $tabs['fundraising']['class'] = array( 'show_if_wf_fundraising','hide_if_wf_donation','hide_if_external', 'hide_if_grouped', 'hide_if_simple', 'hide_if_variable' );
+            $tabs['reward']['class'] = array( 'show_if_wf_fundraising','hide_if_wf_donation','hide_if_external', 'hide_if_grouped', 'hide_if_simple', 'hide_if_variable' );
+            $tabs['update']['class'] = array( 'show_if_wf_fundraising','hide_if_wf_donation','hide_if_external', 'hide_if_grouped', 'hide_if_simple', 'hide_if_variable' );
 
             return $tabs;
 

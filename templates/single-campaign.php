@@ -70,7 +70,6 @@ get_header(); ?>
      */
     do_action( 'wf_wc_after_main_loop' );
 ?>
-
 <?php get_footer();
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */
