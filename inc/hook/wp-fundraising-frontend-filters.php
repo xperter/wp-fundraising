@@ -207,7 +207,6 @@ if (!function_exists('wf_signup_button_text')) {
     }
 }
 
-
 //Dashboard Filter
 if (!function_exists('wf_add_new_campaign_text')) {
     function wf_add_new_campaign_text()
