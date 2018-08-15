@@ -26,7 +26,7 @@ $query_args = array(
 ob_start();
 
 query_posts($query_args);
-if (have_posts()): ?>
+if (have_posts()): ?> 
     <section class="waypoint-tigger xs-gray-bg xs-section-padding">
         <div class="container">
             <div class="xs-section-heading row xs-margin-0">

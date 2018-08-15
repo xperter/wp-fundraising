@@ -47,7 +47,7 @@ class WP_Fundraising_Donate_Form_Shortcode{
      * @since 1.0
      *
      */
-
+ 
 
     public function __construct(){
         $this->wp_fundraising_init_donate_form_shortcode();
