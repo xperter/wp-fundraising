@@ -378,6 +378,8 @@ if (!class_exists('WP_FundRaising')) {
                 update_post_meta($post_id, '_wf_location', sanitize_text_field($_POST['_wf_location']));
             endif;
 
+            update_post_meta( $post_id, '_sale_price', '0' );
+            update_post_meta( $post_id, '_price', '0' );
         }
 
         /**

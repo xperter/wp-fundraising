@@ -142,13 +142,12 @@ class WF_Campaigns_Widget extends Widget_Base {
         $author = $settings['show_author'];
         $status = $settings['status'];
         $donation = $settings['donation'];
-
         
         ?>
         <div class="xs-wp-fundraising-listing-style-<?php echo esc_attr($style);?>">
             <?php
             
-                echo do_shortcode('[wp_fundraising_listing cat="'.$xs_post_cat.'" number="' . $post_count . '" col="'.$count_col.'" style="'.$style.'" filter="'.$show_filter.'" "'.$author.'" donation="'.$donation.'" status="'.$status.'"]');
+                echo do_shortcode('[wp_fundraising_listing cat="'.$xs_post_cat.'" number="' . $post_count . '" col="'.$count_col.'" style="'.$style.'" filter="'.$show_filter.'" author="'.$author.'" donation="'.$donation.'" status="'.$status.'"]');
             ?>
         </div>
     <?php

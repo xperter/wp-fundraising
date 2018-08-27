@@ -241,7 +241,8 @@ if (!class_exists('WP_FundRaising_Donation')) {
             if (isset($_POST['_wfd_location'])) :
                 update_post_meta($post_id, '_wfd_location', sanitize_text_field($_POST['_wfd_location']));
             endif;
-
+            update_post_meta( $post_id, '_sale_price', '0' );
+            update_post_meta( $post_id, '_price', '0' );
         }
 
 

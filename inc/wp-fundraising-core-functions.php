@@ -303,10 +303,16 @@ function get_wp_fundraising_product_cats(){
     $query_args = array(
         'post_type'     => 'product',
         'tax_query'     => array(
+            'relation'  => 'OR',
             array(
                 'taxonomy'  => 'product_type',
                 'field'     => 'slug',
                 'terms'     => 'wp_fundraising',
+            ),
+            array(
+                'taxonomy'  => 'product_type',
+                'field'     => 'slug',
+                'terms'     => 'wf_donation',
             ),
         ),
         'posts_per_page' => -1,
