@@ -1397,29 +1397,8 @@ ul, li {
     box-shadow: 0px 6px 23px 0px rgba(135, 135, 135, 0.118);
     max-width: 100%;
     padding: 60px; }
-.xs-modal .modal-dialog {
-    position: absolute;
-    top: -100%;
-    left: 0;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: .55s;
-    transition: .55s;
-    background-color: transparent;
-    min-width: 570px;
-    opacity: 0;
-    margin: 0;
-    z-index: 9999; }
-.xs-modal.show .modal-dialog {
-    /* -webkit-transform: translateX(-50%); */
-    /* transform: translateX(-50%); */
-    -webkit-transition: top .53s ease-out, opacity .35s ease-out;
-    transition: top .53s ease-out, opacity .35s ease-out;
-    -webkit-transition-delay: .7s;
-    transition-delay: .7s;
-    opacity: 1;
-    top: 0%;
-    left: 50%; }
+
+
 .xs-modal .fundpress-tab-nav-v5 {
     margin-bottom: 30px; }
 
@@ -2737,7 +2716,7 @@ h1#ps_login_success a:hover {
 
 
 /*-------------------------
-	Inline help tip
+        Inline help tip
 --------------------------*/
 
 
@@ -2833,10 +2812,6 @@ h1#ps_login_success a:hover {
 }
 
 
-.xs-modal .modal-dialog {
-    z-index: 99999;
-}
-
 #wp_fundraising_login_form .icon {
     font-family: 'iconfont' !important;
 }
@@ -2919,19 +2894,13 @@ h5.auth_success{
 .product-thumbnail-lsit li a {
     display: block; 
 }
-  
+
 
 .modal-backdrop {
     z-index: 99;
 }
 
-.xs-modal .modal-lg.modal-dialog {
-    margin-left: -400px;
-}
 
-.xs-modal .modal-dialog.modal-default {
-    margin-left: -285px;
-}
 
 .video-popup-btn i{
     font-family:'iconfont' !important;
@@ -2954,3 +2923,8 @@ h5.auth_success{
     transition: all 0.4s ease; }
 .video-popup-btn:hover {
     color: #e23e57; }
+@media (min-width: 992px){
+    .xs-modal .modal-lg {
+        max-width: 600px;
+    }
+}
