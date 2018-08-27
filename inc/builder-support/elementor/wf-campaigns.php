@@ -142,7 +142,6 @@ class WF_Campaigns_Widget extends Widget_Base {
         $author = $settings['show_author'];
         $status = $settings['status'];
         $donation = $settings['donation'];
-// fw_print($show_filter);
         
         ?>
         <div class="xs-wp-fundraising-listing-style-<?php echo esc_attr($style);?>">
