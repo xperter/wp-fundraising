@@ -28,11 +28,8 @@ function wp_fundraising_listing_shortcode($atts = array()){
         }elseif (get_query_var('page')){
             $paged = absint( get_query_var( 'page' ) );
         }
-//        $tax_args = array(
-//            'taxonomy' => 'product_cat',
-//        );
 
-//        $categories = get_terms( $tax_args );
+        
         $categories = get_wp_fundraising_product_cats();
         ob_start();
         if($args['filter'] == 'yes'){ ?>

@@ -14,7 +14,7 @@ $donation_level_fields = get_post_meta($campaign_id, 'repeatable_donation_level_
     </div>
     <?php
 
-   
+    
     ?>
     <?php if ( $donation_level_fields ) : ?>
         <div class="xs-input-group">
@@ -41,7 +41,7 @@ $donation_level_fields = get_post_meta($campaign_id, 'repeatable_donation_level_
                     <div class="input-group-prepend">
                         <div class="input-group-text">$</div>
                     </div>
-                    <input type="number" min="1" class="form-control" id="inlineFormInputGroup" placeholder="Amount">
+                    <input type="number" name="wp_donate_amount_field" min="1" class="form-control" id="inlineFormInputGroup" placeholder="Amount">
                 </div>
                 <div class="select-amaunt-group">
                     <span><?php esc_html_e('Select Amount:','wp-fundraising');?></span>
