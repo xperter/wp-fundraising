@@ -503,7 +503,7 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
             $html .= '<div class="help-tip">';
             $html .= '<p>' . esc_html__("Enter  Reward Title", "wp-fundraising") . '</p>';
             $html .= '</div>';
-            $html .= '<input type="number" class="form-control" name="_wf_reward_title[]" id="reward_title">';
+            $html .= '<input type="text" class="form-control" name="_wf_reward_title[]" id="reward_title">';
             $html .= '</div>';
 
 
