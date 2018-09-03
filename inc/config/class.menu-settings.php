@@ -159,7 +159,18 @@ if ( !class_exists('WF_Menu_Settings' ) ):
 
                 ),
                 'wf_advanced' => array(
-
+                    array(
+                        'name'        => '_wf_frontend_campaign_submission_status',
+                        'label'     => esc_html__('Select Frontend Campaign Submission Status','wp-fundraising'),
+                        'desc'      => esc_html__('Select Publish, Draft or Pending Review.','wp-fundraising'),
+                        'type'      => 'select',
+                        'default'      => 'draft',
+                        'options' => array(
+                            'draft' => 'Draft',
+                            'publish' => 'Published',
+                            'pending' => 'Pending',
+                        )
+                    ),
                     array(
                         'name'  => '_wf_hide_campaign_from_shop_page',
                         'label' => esc_html__( 'Enable/Disable', 'wp-fundraising' ),

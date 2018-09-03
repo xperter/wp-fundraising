@@ -29,8 +29,15 @@ if (! class_exists('WP_Fundraising_Frontend_Campaign_Submit_Form')) {
 
                 if ( empty($_POST['wp_fundraising_terms_agree'])){
                     die(json_encode(array('success'=> 0, 'message' => esc_html__('Please check terms condition', 'wp-fundraising'))));
-                }
-
+                } 
+                
+                // if (wf_get_option('_wf_frontend_campaign_submission_status', 'wf_advanced')=='draft') {
+                //     $status = 'draft';
+                // }elseif (wf_get_option('_wf_frontend_campaign_submission_status', 'wf_advanced')=='publish') {
+                
+                // }elseif (wf_get_option('_wf_frontend_campaign_submission_status', 'wf_advanced')=='pending') {
+                
+                // }
                 if ($_POST['wf_campaign_title']) {
                     $title = sanitize_text_field($_POST['wf_campaign_title']);
                 }
@@ -144,7 +151,7 @@ if (! class_exists('WP_Fundraising_Frontend_Campaign_Submit_Form')) {
                         'post_content'  => $description,
                         'post_excerpt'  => $short_description,
                         'post_author' => $user_id,
-                        'post_status' => 'draft',
+                        'post_status' => wf_get_option('_wf_frontend_campaign_submission_status', 'wf_advanced'),
                     );
                     wp_update_post( $my_post );
 
@@ -155,7 +162,7 @@ if (! class_exists('WP_Fundraising_Frontend_Campaign_Submit_Form')) {
                         'post_content'  => $description,
                         'post_excerpt'  => $short_description,
                         'post_author' => $user_id,
-                        'post_status' => 'draft',
+                        'post_status' => wf_get_option('_wf_frontend_campaign_submission_status', 'wf_advanced'),
                     );
                     $post_id = wp_insert_post($my_post);
                     $campaign_id = $post_id;
