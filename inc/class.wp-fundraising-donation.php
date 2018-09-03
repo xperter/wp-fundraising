@@ -396,7 +396,7 @@ if (!class_exists('WP_FundRaising_Donation')) {
 
             return $tabs;
 
-        }
+        } 
 
         public static function wf_donation_get_instance()
         {
