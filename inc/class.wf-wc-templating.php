@@ -42,12 +42,6 @@ if (! class_exists('WF_WC_Templating')) {
 
         public $_selected_theme_uri;
 
-        /**
-         * @var
-         *
-         * determine you are used which vendor
-         * [woocommerce, edd, wpneo]
-         */
 
         public $_vendor;
 

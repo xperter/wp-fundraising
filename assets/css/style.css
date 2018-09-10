@@ -2928,3 +2928,7 @@ h5.auth_success{
         max-width: 600px;
     }
 }
+
+.xs-list-with-content.fundpress-simple-list-content {
+    display: block;
+}

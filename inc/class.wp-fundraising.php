@@ -174,7 +174,7 @@ if (!class_exists('WP_FundRaising')) {
                     'desc_tip'      => true,
                     'type' 			=> 'text',
                 )
-            );
+            ); 
             if (wf_get_option('_wf_hide_target_date', 'wf_basics')=='off') {
                 woocommerce_wp_text_input(
                     array(

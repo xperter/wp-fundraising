@@ -1,6 +1,5 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
-
 global $post;
 $xs_product = wc_get_product($post->ID);
 if($xs_product->get_type() == 'wf_donation'){

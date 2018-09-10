@@ -94,9 +94,6 @@ if (! class_exists('WP_Fundraising_Init')) {
                 update_post_meta( $fundraising_listing_page, '_wp_page_template', 'template-wp-fundraising.php' );
             }
 
-            /**
-             * Update option wpneo fundraising dashboard page
-             */
             if (isset($insert_dashboard_page)){
                 update_option( 'wp_fundraising_dashboard_page_id', $insert_dashboard_page );
             }
