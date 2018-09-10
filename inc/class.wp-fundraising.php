@@ -168,18 +168,18 @@ if (!class_exists('WP_FundRaising')) {
             woocommerce_wp_text_input(
                 array(
                     'id'            => '_wf_duration_start',
-                    'label'         => esc_html__( 'Start date- dd/mm/yyyy', 'wp-fundraising' ),
+                    'label'         => esc_html__( 'Start date- mm/dd/yyyy or dd-mm-yyyy', 'wp-fundraising' ),
                     'placeholder'   => esc_attr__( 'Start time of this campaign', 'wp-fundraising' ),
                     'description'   => esc_html__( 'Enter start of this campaign', 'wp-fundraising' ),
                     'desc_tip'      => true,
                     'type' 			=> 'text',
                 )
-            );
+            ); 
             if (wf_get_option('_wf_hide_target_date', 'wf_basics')=='off') {
                 woocommerce_wp_text_input(
                     array(
                         'id'            => '_wf_duration_end',
-                        'label'         => esc_html__( 'End date- dd/mm/yyyy', 'wp-fundraising' ),
+                        'label'         => esc_html__( 'End date- mm/dd/yyyy or dd-mm-yyyy', 'wp-fundraising' ),
                         'placeholder'   => esc_attr__( 'End time of this campaign', 'wp-fundraising' ),
                         'description'   => esc_html__( 'Enter end time of this campaign', 'wp-fundraising' ),
                         'desc_tip'      => true,
@@ -239,7 +239,7 @@ if (!class_exists('WP_FundRaising')) {
                 );
             }
             echo '<div class="options_group"></div>';
-
+ 
             $options = array();
 
             if (wf_get_option('_wf_hide_target_goal', 'wf_basics')=='off') {

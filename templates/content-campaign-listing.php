@@ -14,6 +14,7 @@ $backers_count = wf_backers_count(get_the_ID());
 $wp_country  = get_post_meta( get_the_ID(), '_wf_country', true);
 $total_sales    = get_post_meta( get_the_ID(), 'total_sales', true );
 $enddate        = get_post_meta( get_the_ID(), '_wf_duration_end', true );
+$show_end_date = wf_get_option('_wf_hide_campaign_expiry_from_listing', 'wf_basics');
 
 $short_description = apply_filters( 'woocommerce_short_description', get_the_excerpt() );
 
@@ -79,8 +80,10 @@ $grid = 12/$cols;
                         <li><span class="number-percentage-count"><?php echo wc_price($raised); ?></span><span><?php echo wf_archive_fund_raised_text(); ?></span></li>
                     <?php } ?>
 
-                    <?php if ($days_remaining) { ?>
-                        <li><?php echo $days_remaining; ?><span><?php echo wf_archive_days_remaining_text(); ?></span></li>
+                    <?php if ($show_end_date == 'off') { ?>
+                        <?php if ($days_remaining) { ?>
+                            <li><?php echo $days_remaining; ?><span><?php echo wf_archive_days_remaining_text(); ?></span></li>
+                        <?php } ?>
                     <?php } ?>
                 </ul>
 
